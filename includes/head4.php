@@ -1,7 +1,7 @@
 <?php
 	$mediaID = $_GET['mediaid'];
 	$api_root = 'https://api.photoman.ng/api/v1/';
-	$page_url = 'https://photoman.ng/news-article';
+	$page_url = 'https://photoman.ng/media';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $api_root.'media/'.$mediaID);
