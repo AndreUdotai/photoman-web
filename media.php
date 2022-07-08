@@ -3,7 +3,7 @@
     
     <head>
 
-        <?php include 'includes/head.php'; ?>
+        <?php include 'includes/head4.php'; ?>
 
         <title>Photoman - Media</title>
     </head>
