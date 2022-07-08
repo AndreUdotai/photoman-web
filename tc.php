@@ -59,7 +59,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12 mb-res-sm-30px">
                             <div class="single-about" style="text-align: justify;">
-                                <h4>1. INTRODUCTION</h4>
+                                <h4 style="text-align: left">1. INTRODUCTION</h4>
                                 <p>
                                     Welcome to Photoman and its Affiliates’ Electronic Website/Homepage, hereinafter referred to as “Website” (which expression shall where the context so admits, include its successors–in the title and assigns).
                                 </p>
@@ -74,7 +74,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12 mb-res-sm-30px">
                             <div class="single-about" style="text-align: justify;">
-                                <h4>2. DEFINITIONS</h4>
+                                <h4 style="text-align: left">2. DEFINITIONS</h4>
                                 <p>
                                     <b><i>Wherever the following words and phrases appear in these Terms and Conditions they will always have the following meanings</i>:</b>.
                                 </p>
@@ -106,7 +106,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify">
-                                <h4>3. ELIGIBILITY</h4>
+                                <h4 style="text-align: left">3. ELIGIBILITY</h4>
                                 <p>
                                     <b><i>3.1</i></b> To use this Website, you must have legal capacity
                                 </p>
@@ -116,7 +116,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify">
-                                <h4>4. REGISTRATIONS & CONFIRMATIONS</h4>
+                                <h4 style="text-align: left">4. REGISTRATIONS & CONFIRMATIONS</h4>
 
                                 <p>
                                     By registering for the services provided through this Website You agree to pay any fees that are due in respect of any such service that You use. Where any service for which You register on or through this Website is provided by or with a service provider, agent, or partner of Photoman/its Affiliates, You agree that You will observe any additional terms and conditions associated with the part of the service provided by them.
@@ -131,7 +131,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify">
-                                <h4>5. APPLICATION FOR & USE OF THE WEBSITE</h4>
+                                <h4 style="text-align: left">5. APPLICATION FOR & USE OF THE WEBSITE</h4>
 
                                 <p>
                                     <b><i>5.1</i></b> <b><i>Photoman</i></b>/its Affiliates reserves the right, at its sole discretion, to refuse to act on your registration application and/or updates of your registration data made via this Website.
@@ -154,7 +154,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
-                                <h4>6. PHOTOMAN’S/ITS AFFILIATES’ OBLIGATIONS TO RETAIN YOUR PERSONAL INFORMATION AND YOUR ACCESS TO AND CONTROL OF SUCH PERSONAL INFORMATION</h4>
+                                <h4 style="text-align: left">6. PHOTOMAN’S/ITS AFFILIATES’ OBLIGATIONS TO RETAIN YOUR PERSONAL INFORMATION AND YOUR ACCESS TO AND CONTROL OF SUCH PERSONAL INFORMATION</h4>
 
                                 <p>
                                     <b><i>6.1</i></b> How long You have been a customer with us, the types of products or services offering weprovide You, and when You will stop being our customer 
@@ -199,7 +199,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>7. ACCESS TO & CONTROL OVER INFORMATION</h4>
+                                <h4 style="text-align: left">7. ACCESS TO & CONTROL OVER INFORMATION</h4>
 
                                 <p>
                                     In respect of your Personal Information with us, You can do any time the following by contacting us:
@@ -246,7 +246,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>8. YOUR RESPONSIBILITIES</h4>
+                                <h4 style="text-align: left">8. YOUR RESPONSIBILITIES</h4>
 
                                 <p>
                                     <b><i>8.1</i></b> You confirm You have read these Terms and Conditions and the Privacy Notice and agree to be bound by them every time You access the Website;
@@ -288,7 +288,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>9. LIABILITIES & EXCLUSION OF LIABILITIES</h4>
+                                <h4 style="text-align: left">9. LIABILITIES & EXCLUSION OF LIABILITIES</h4>
 
                                 <p>
                                     <b><i>9.1</i></b> Photoman/its Affiliates shall not be liable to You for any loss or damage You may suffer or incur as a result of your use of the Website unless such a loss or damage results directly from the fraud or wilful default of Photoman/its Affiliates.
@@ -315,7 +315,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
  
-                                <h4>10. SECURITY & CONFIDENTIALITY</h4>
+                                <h4 style="text-align: left">10. SECURITY & CONFIDENTIALITY</h4>
 
                                 <p>
                                     <b><i>10.1</i></b> You understand and agree that You are responsible for maintaining the confidentiality of your User ID and password. You agree and undertake that:
@@ -381,7 +381,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>11. THIRD PARTY WEBSITE OR WEBSITES</h4>
+                                <h4 style="text-align: left">11. THIRD PARTY WEBSITE OR WEBSITES</h4>
  
                                 <p>
                                     <b><i>11.1</i></b> You may not frame, link, or deep-link this Website to any other website or website without our prior written consent. Should You wish to frame or to set up a link / deep-link to this Website please contact Photoman/its Affiliates via <a href="www.photoman.ng">www.photoman.ng</a> or (email). Without prejudice to any of its rights, Photman/its Affiliates may upon discovering such unauthorized framing, linking, or deep-linking disable them.
@@ -404,7 +404,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>12. CHANGES & OPERATION OF THE WEBSITE</h4>
+                                <h4 style="text-align: left">12. CHANGES & OPERATION OF THE WEBSITE</h4>
 
                                 <p>
                                     <b><i>Photoman</i></b>/its Affiliates reserve the right, at its discretion, to make changes to any part of the Website, suspend or terminate the operation of the Website at any time for support and maintenance, or update the information contained on the Website and the Information or these Terms and Conditions to improve or streamline the services which it offers. Should these Terms and Conditions be amended, Photoman/its Affiliates will publish details of the amendments on the Website.
@@ -435,7 +435,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
  
-                                <h4>14. INDEMNITY</h4>
+                                <h4 style="text-align: left">14. INDEMNITY</h4>
 
                                 <p>
                                     You agree to indemnify and hold harmless Photoman/its Affiliates and their officers, agents, and employees from and against any claims, demands, costs, damages, and or penalties arising out of any failure by You or any agent acting on your behalf to fully observe these Terms and Conditions or because of any use by You or such agent of any information or images provided on this Website. 
@@ -447,7 +447,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
  
-                                <h4>15. INTELLECTUAL PROPERTY RIGHTS</h4>
+                                <h4 style="text-align: left">15. INTELLECTUAL PROPERTY RIGHTS</h4>
 
                                 <p>
                                     <b><i>15.1</i></b> The composition contained in this Website (“PhotomanContent”), including but not limited to, text, data, audio, video, programming, functionality, software, source code, graphics, photographs, databases, illustrations, artwork, names, logos, designs, button icons, scripts, trademarks, trade dress, service marks, domain names, service names and the information contained in the Website regarding or connected to Photomanand its Affiliates and in respect of their activities, whether registered or unregistered, are either owned by and are the intellectual property of Photomanor its Affiliates or licensed to Photomanor its Affiliates, and are subject to copyright and other intellectual property rights under Nigerian Law and applicable international conventions. Where applicable some of PhotomanContent, including but not limited to the text, images, and other information herein and their arrangement, are protected by copyright, trademark, and other proprietary rights of the relevant third party providers. Photomanand its Affiliates reserve the right to take legal action in respect of any reproduction, copying, imitating, aggregating, reproducing, distribution, framing, displaying, selling, licensing, uploading to a third party or for personal use, publication, adaptation, broadcast, public performance or other use or communication to the public of the information contained on the Website without the prior written consent of Photomanor its Affiliates (whichever is applicable). You are not permitted to use any of the trademarks displayed on the Website without the prior written consent of Photoman/its Affiliates or the third party that owns the trademark. 
@@ -474,7 +474,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
  
-                                <h4>16. ASSIGNMENT & SEVERABILITY</h4>
+                                <h4 style="text-align: left">16. ASSIGNMENT & SEVERABILITY</h4>
 
                                 <p>
                                     Each of the provisions of these Terms and Conditions is severable and distinct from the others. If at any time one or more of such provisions is or becomes illegal, invalid, or unenforceable in any respect under the laws of any jurisdiction, the legality, validity, or enforceability of the remaining provisions shall not be affected in any way. 
@@ -489,7 +489,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
  
-                                <h4>17. THIRD-PARTY ADVERTISING</h4>
+                                <h4 style="text-align: left">17. THIRD-PARTY ADVERTISING</h4>
 
                                 <p>
                                     <b><i>Photoman</i></b>/its Affiliates allow third parties to place advertisements on the Website. Third-party advertisements are clearly labeled as such and may be chargeable. Photoman andits Affiliates do not endorse and are not responsible for the content of any third-partyadvertising on this Website or otherwise. 
@@ -513,7 +513,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
  
-                                <h4>19. AUTOMATED PROCESSING OF PERSONAL DATA</h4>
+                                <h4 style="text-align: left">19. AUTOMATED PROCESSING OF PERSONAL DATA</h4>
 
                                 <p>
                                     <b><i>Photoman</i></b> and its Affiliates may engage in activities that involve the automated processing and/or profiling of information you provide us where (i) it is necessary for entering into or performing a contract; (ii) it is authorized or required by law (which also provides safeguards for you); or (iii) it is the subject of explicit consent from You. <b><i>You hereby consent that in the circumstances not covered aboveand its Affiliates can engage in activities that involve the automated processing and/or profiling of your information in respect of the services for which You provided the Personal Data. Such automated processing and/or profiling in respect of the services can include, without limitation, carrying out automated processing and/or profiling to improve the services or introduce more services.</i></b>
@@ -525,7 +525,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
  
-                                <h4>20. OVERSEAS PERSONS</h4>
+                                <h4 style="text-align: left">20. OVERSEAS PERSONS</h4>
 
                                 <p>
                                     As a consequence of legal restrictions, the release, publication, or distribution of the information contained on this Website in certain jurisdictions or to certain persons may be restricted or unlawful. All persons resident or located outside the Federal Republic of Nigeria who wish to view this Website must first satisfy themselves that they are not subject to any local requirements that prohibit or restrict them from doing so and should inform themselves of, and observe, any applicable legal or regulatory requirements applicable in their jurisdiction. If You are resident or located in a country that renders the accessing of this Website or any part or parts thereof illegal, whether or not subject to making certain notifications or taking other action, You should not view this area of the Website or such illegal part or parts of the Website.

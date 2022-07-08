@@ -59,7 +59,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12 mb-res-sm-30px">
                             <div class="single-about" style="text-align: justify;">
-                                <h4>1. INTRODUCTION</h4>
+                                <h4 style="text-align: left">1. INTRODUCTION</h4>
                                 <p>
                                     <b><i>1.1</i></b> You care about your personal information and how it is used. At Photoman, we also care about this. This is why we take your personal information seriously. When you use our Services, you’ll share some information about yourself with us. Some of this information may be private.
                                 </p>
@@ -84,7 +84,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12 mb-res-sm-30px">
                             <div class="single-about" style="text-align: justify;">
-                                <h4>2. INFORMATION THAT WE COLLECT AND HOW THE INFORMATION IS COLLECTED</h4>
+                                <h4 style="text-align: left">2. INFORMATION THAT WE COLLECT AND HOW THE INFORMATION IS COLLECTED</h4>
                                 <p>
                                     <b><i>2.1 When you visit our Website or use our App</i>:</b> We collect your Personal Information if you use and open an account to use the platform or perform any transactions on the platform. We collect personal information such as name, phone number, email address and/orpassword, and address, to enable you to sign up for our services.
                                 </p>
@@ -138,7 +138,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify">
-                                <h4>3. HOW WE USE THE INFORMATION WE COLLECT</h4>
+                                <h4 style="text-align: left">3. HOW WE USE THE INFORMATION WE COLLECT</h4>
                                 <p>
                                     <b><i>3.1</i></b> Photoman may use information collected when you visit our Website for the following business purposes:<br> 
                                     <b><i>3.1.1</i></b> To provide and maintain our services;<br>
@@ -164,7 +164,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify">
-                                <h4>4. Legal Bases for Collecting Your Personal Information</h4>
+                                <h4 style="text-align: left">4. Legal Bases for Collecting Your Personal Information</h4>
 
                                 <p>
                                     <b><i>Please note that you are not obliged to share your Personal Information with Us. But if you refuse to share the Personal Information we require from you to provide our services, we will not be able to provide our services to you. To use your information as described above, we rely on the following legal bases:</i></b>
@@ -187,7 +187,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify">
-                                <h4>5. HOW WE SHARE INFORMATION WE COLLECT</h4>
+                                <h4 style="text-align: left">5. HOW WE SHARE INFORMATION WE COLLECT</h4>
 
                                 <p>
                                     <b><i>We may share personal information about you with third parties in the following circumstances:</i></b>
@@ -231,7 +231,7 @@
                     <div class="row mt-60px">
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
-                                <h4>6. HOW WE SECURE YOUR INFORMATION</h4>
+                                <h4 style="text-align: left">6. HOW WE SECURE YOUR INFORMATION</h4>
 
                                 <p>
                                     <b><i>6.1</i></b> Except as described above, we do not reveal information about you to unaffiliated third parties. We restrict access to non-public personal information about you to those Photoman employees who need to know that information to provide products or services to you. 
@@ -265,7 +265,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>7. HOW LONG WE RETAIN YOUR INFORMATION?</h4>
+                                <h4 style="text-align: left">7. HOW LONG WE RETAIN YOUR INFORMATION?</h4>
 
                                 <p>
                                     <b><i>7.1</i></b> We will retain personal information we collect from you where we have a justifiable business need to do so or for as long as it is needed to fulfill the purposes outlined in this Privacy Policy. Unless a longer retention period is required or permitted by law (such as tax, legal, or other purposes), we retain your information securely throughout the duration of your relationship with us and for a minimum of three years thereafter as necessary to comply with our legal and regulatory obligations, resolve disputes, and enforce our agreements. You can request deletion of your personal information at any time (see ‘Your Privacy Rights section below for further information) and we will consider your request by applicable laws.
@@ -281,7 +281,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>8. YOUR PRIVACY RIGHTS</h4>
+                                <h4 style="text-align: left">8. YOUR PRIVACY RIGHTS</h4>
 
                                 <p>
                                     <b><i>8.1 Updating Your Information:</i></b> If you would like to update the personal information that you have provided to us, please log on to your Photoman account to update your profile settings. 
@@ -317,7 +317,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>9. LINKED WEBSITES AND OTHER THIRD PARTIES</h4>
+                                <h4 style="text-align: left">9. LINKED WEBSITES AND OTHER THIRD PARTIES</h4>
 
                                 <p>
                                     This Privacy Policy only addresses the use and disclosure of information we collect from you. There may be links from our sites and resources provided by third parties. This Privacy Policy applies only to our sites. Accessing those third-party sites or sources requires you to leave our sites.  We do not control those third-party sites or any of the content contained therein, and you agree that we are in no way responsible or liable for any of those third-party sites, including, without limitation, their content, failures, policies, promotions, products, services, or actions and any damages, losses, failures or problems caused by, related to, or arising from those sites. We encourage you to review all policies, regulations, rules, and terms, including the privacy policies, of each site you visit or app you use.
@@ -329,7 +329,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
  
-                                <h4>10. Third-Party Web Beacons & Advertising</h4>
+                                <h4 style="text-align: left">10. Third-Party Web Beacons & Advertising</h4>
 
                                 <p>
                                     We may also implement third-party content, such as advertising, on the Service that uses clear gifs or web beacons, which allow the third-party content provider to read and write cookies to your browser in connection with your viewing of the third-party content on the Service. This information is collected directly by the third party, and Photomandoes not participate in that data transmission. Information collected by third parties in this manner is subject to that third party’s data collection, use, and disclosure policies.
@@ -341,7 +341,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>11. INTERNATIONAL DATA TRANSFERS</h4>
+                                <h4 style="text-align: left">11. INTERNATIONAL DATA TRANSFERS</h4>
  
                                 <p>
                                     <b><i>11.1</i></b> We will take all steps reasonably necessary to ensure that your data is treated securely and by this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.
@@ -361,7 +361,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>12. BLOGS AND SOCIAL MEDIA</h4>
+                                <h4 style="text-align: left">12. BLOGS AND SOCIAL MEDIA</h4>
 
                                 <p>
                                     <b><i>12.1</i></b> Our Website may include social media features, such as Facebook Like button, and widgets such as the Share button. These features may collect your IP address, and which page you are visiting on our site, and may set a cookie to enable the feature to function properly. Social media features and widgets are hosted on our site or by a third party, and your interactions with these features are governed by the privacy policy of the company providing them.
@@ -377,7 +377,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
 
-                                <h4>13. CHILDREN'S PRIVACY</h4>
+                                <h4 style="text-align: left">13. CHILDREN'S PRIVACY</h4>
 
                                 <p>
                                     <b><i>13.1</i></b> Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, monitor, and guide children’sonline activity. Our Website, products, and services are not directed to individuals under the age of 18. We do not knowingly collect personal information from such individuals. 
@@ -392,7 +392,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
  
-                                <h4>14. CHANGES TO THIS PRIVACY POLICY</h4>
+                                <h4 style="text-align: left">14. CHANGES TO THIS PRIVACY POLICY</h4>
 
                                 <p>
                                     <b><i>14.1</i></b> We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. We will let you know via email or with a prominent notice on our Website before the change becomes effective and update the effective date at the top of this Privacy Policy. 
@@ -408,7 +408,7 @@
                         <div class="col-md-12">
                             <div class="single-about" style="text-align: justify;">
  
-                                <h4>15. CONTACT US</h4>
+                                <h4 style="text-align: left">15. CONTACT US</h4>
 
                                 <p>
                                     If you have any questions about our privacy policies; want to exercise your right to see a copy of the information that we hold about you; think that information we hold about you may need to be corrected; want to delete all or any part of your information; want to object to the processing on legitimate grounds, or you have a particular complaint, please email SUPPORT with inquiry topic ‘Data privacy’ or send a signed letter addressed to: <a href="mailto:ekikere@dct.ng">ekikere@dct.ng</a> 
