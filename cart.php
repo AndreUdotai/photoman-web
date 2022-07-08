@@ -60,7 +60,7 @@
                                     <div class="col-lg-12">
                                         <div class="cart-shiping-update-wrapper">
                                             <div class="cart-shiping-update">
-                                                <a href="media">Continue Shopping</a>
+                                                <a href="explore">Continue Shopping</a>
                                             </div>
                                             <div class="cart-clear">
                                                 <a href="#" class="btn-clear-cart">Clear Shopping Cart</a>
