@@ -12,7 +12,7 @@
 
 	$mediaArrayResponse = json_decode($media, true);
 	$responseErrorState = $mediaArrayResponse['error'];
-	$mediaArrayRoot = $mediaArrayResponse['event'];
+	$mediaArrayRoot = $mediaArrayResponse['media'];
 ?>
 
 
