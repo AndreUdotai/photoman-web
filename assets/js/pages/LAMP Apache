@@ -1,0 +1,300 @@
+## How to Install LAMP Apache, MySQL, PHP in Ubuntu 22.04
+
+## How to Install LAMP Apache, MySQL, PHP in Ubuntu 22.04. In this guide you will learn how to install Apache2, MySQL and PHP 8.1.
+
+## You will also install some common PHP extensions and adjust the PHP configurations. Install PhpMyAdmin and finally you will secure your setup with Let’s Encrypt SSL and configure HTTPS redirection.
+
+## This setup is tested on Google cloud, so it will work on all cloud hosting services like AWS, Azure or any VPS or any dedicated servers running Ubuntu 22.04.
+
+## Prerequisites
+
+	* Root access to your server or a sudo user.
+
+Step 1: Setup Initialization
+	
+	* Start by updating the packages to the latest version available using the following command.
+
+	sudo apt update
+	sudo apt upgrade
+
+Step 2: Install Apache
+
+	sudo apt install apache2
+
+Step 3: Setup Firewall
+	
+	* Now you can set up Uncomplicated Firewall (UFW) with Apache to allow public access on default web ports for HTTP (80), HTTPS (443) and SSH (22)
+
+	sudo ufw app list
+
+	****************************
+	Output
+
+	Available applications:
+	   Apache
+	   Apache Full
+	   Apache Secure
+	   OpenSSH
+
+	*****************************
+
+	*****************************
+	Apache: This profile opens port 80 (normal, unencrypted web traffic)
+	Apache Full: This profile opens both port 80 (normal, unencrypted web traffic) and port 443 (TLS/SSL encrypted traffic)
+	Apache Secure: This profile opens only port 443 (TLS/SSL encrypted traffic)
+	OpenSSH: This profile opens port 22 for SSH access.
+	If you are not going to use SSL you need to enable only the Apache profile.
+	******************************
+
+	* Now we will enable Apache Full.
+
+	sudo ufw allow OpenSSH
+	sudo ufw allow 'Apache Full'
+
+	sudo ufw enable
+
+	* With this command you can view the status of UFW.
+
+	sudo ufw status
+
+	* You will see the output as follows.
+
+	********************************
+	Output
+	Status: active
+	 To                         Action      From
+	 --                         ------      ----
+	 Apache Full                ALLOW       Anywhere                  
+	 OpenSSH                    ALLOW       Anywhere                  
+	 Apache Full (v6)           ALLOW       Anywhere (v6)             
+	 OpenSSH (v6)               ALLOW       Anywhere (v6)
+	 *******************************
+
+Step: 4 Check Apache Installation
+
+	* As we have installed Apache in step 2 it should be started automatically and already be up and running.
+
+	* Check Apache version using the below command
+
+		sudo apachectl -v
+
+		********************************
+		Output
+			Server version: Apache/2.4.52 (Ubuntu)
+			Server built:   2022-03-25T00:35:40
+		********************************
+
+	* Every process in Apache is managed with the systemctl command. Check the status of Apache with the following command.
+
+		sudo systemctl status apache2
+
+		*******************************
+		Output
+		● apache2.service - The Apache HTTP Server
+		     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+		     Active: active (running) since Fri 2022-04-29 00:34:49 UTC; 2min 52s ago
+		       Docs: https://httpd.apache.org/docs/2.4/
+		   Main PID: 12782 (apache2)
+		      Tasks: 55 (limit: 1151)
+		     Memory: 5.1M
+		        CPU: 52ms
+		     CGroup: /system.slice/apache2.service
+		             ├─12782 /usr/sbin/apache2 -k start
+		             ├─12784 /usr/sbin/apache2 -k start
+		             └─12785 /usr/sbin/apache2 -k start
+		*********************************
+
+	* Now we have Apache installed and configured Firewall.
+
+Step 5: Install MySQL
+	
+	* In Ubuntu 22.04 MySQL 8 is included by default in the Jammy Jellyfish repositories, so you can install it easily using the apt install command.
+
+	sudo apt install mysql-server
+
+	* Once the installation is completed, the MySQL service will start automatically. To verify that the MySQL server is running, type:
+
+	* The output should show that the service is enabled and running:
+
+		**************************************************
+		● mysql.service - MySQL Community Server
+		     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+		     Active: active (running) since Fri 2022-04-29 00:38:45 UTC; 11s ago
+		    Process: 13836 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, statu>
+		   Main PID: 13844 (mysqld)
+		     Status: "Server is operational"
+		      Tasks: 38 (limit: 1151)
+		     Memory: 351.4M
+		        CPU: 1.043s
+		     CGroup: /system.slice/mysql.service
+		             └─13844 /usr/sbin/mysqld
+
+
+	* Check MySQl version using the below command.
+
+		sudo mysql -V
+
+		*****************************
+		Output
+			mysql  Ver 8.0.28-0ubuntu4 for Linux on x86_64 ((Ubuntu))
+		******************************
+
+Step 6: Secure MySQL
+
+	* MySQL installation comes with a script named mysql_secure_installation that allows you to easily improve the MySQL server security.
+
+	sudo mysql_secure_installation
+
+	* You will be asked to configure the VALIDATE PASSWORD PLUGIN which is used to test the strength of the MySQL users passwords and improve the security.
+
+	* Press y if you want to set up the validate password plugin or any other key to move to the next step.
+
+	* There are three levels of password validation policy, low, medium, and strong.
+
+	* Enter 2 for strong password validation.
+
+
+	* On the next prompt, you will be asked to set a password for the MySQL root user.
+
+	* If you set up the validate password plugin, the script will show you the strength of your new password. Type y to confirm the password.
+
+	* Next, you’ll be asked to remove the anonymous user, restrict root user access to the local machine, remove the test database, and reload privilege tables. You should answer y to all questions.
+
+Step 7: Install PHP
+	
+	* By default Ubuntu 22.04 has the latest PHP 8.1 repository added. So you can install PHP using the following command.
+
+	sudo apt install php8.1-fpm php8.1 libapache2-mod-php8.1 php8.1-common php8.1-mysql php8.1-xml php8.1-xmlrpc php8.1-curl php8.1-gd php8.1-imagick php8.1-cli php8.1-imap php8.1-mbstring php8.1-opcache php8.1-soap php8.1-zip php8.1-intl php8.1-bcmath unzip -y
+
+	* Once PHP is installed you can check the version using the following command.
+
+	php -v
+
+	****************************************
+	Output
+		PHP 8.1.5 (cli) (built: Apr  7 2022 17:46:26) (NTS)
+		Copyright (c) The PHP Group
+		Zend Engine v4.1.5, Copyright (c) Zend Technologies
+		    with Zend OPcache v8.1.5, Copyright (c), by Zend Technologies
+	****************************************
+
+Step 8: Configure PHP
+	
+	* Now we configure PHP for Web Applications by changing some values in php.ini file.
+
+	* For PHP 7.4 with Apache the php.ini location will be in following directory.
+
+	sudo nano /etc/php/8.1/apache2/php.ini
+
+	* Hit F6 for search inside the editor and update the following values for better performance.
+
+	upload_max_filesize = 32M 
+	post_max_size = 48M 
+	memory_limit = 256M 
+	max_execution_time = 600 
+	max_input_vars = 3000 
+	max_input_time = 1000
+
+	* Once you have modified your PHP settings you need to restart your Apache for the changes to take effect.
+
+Step 9: Configure Apache
+
+	* Disable default Apache configuration.
+
+	sudo a2dissite 000-default
+
+	* Create website directories.
+
+	sudo mkdir -p /var/www/html/domainname/public
+
+	* Setup correct permissions.
+
+	sudo chmod -R 755 /var/www/html/domainname
+	sudo chown -R www-data:www-data /var/www/html/domainname
+
+	* Create a new virtual host configuration.
+
+	sudo nano /etc/apache2/sites-available/domainname.conf
+
+	* Paste the following configurations in the new file.
+
+	************************************
+	<VirtualHost *:80>
+	     ServerAdmin admin@domainname.com
+	     ServerName domainname.com
+	     ServerAlias www.domainname.com
+
+	     DocumentRoot /var/www/html/domainname/public
+
+	     <Directory /var/www/html/domainname/public>
+	         Options Indexes FollowSymLinks
+	         AllowOverride All
+	         Require all granted
+	     </Directory>
+
+	     ErrorLog ${APACHE_LOG_DIR}/error.log 
+	     CustomLog ${APACHE_LOG_DIR}/access.log combined 
+ 	</VirtualHost>
+ 	************************************
+
+ 	* Enable the new configuration.
+
+ 	sudo a2ensite domainname.conf
+
+Step 10: Install PhpMyAdmin
+	
+	* PhpMyAdmin is a tool to manage MySQL database easily. You can install it using the below command.
+
+	sudo apt install phpmyadmin
+
+	* Copy PhpMyAdmin configuration for Apache.
+
+	sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+
+	* Enable the configuration.
+
+	sudo a2enconf phpmyadmin.conf
+
+	* Restart Apache.
+
+	sudo service apache2 restart
+
+	* Now you have PhpMyAdmin installed, this can be accessible with this route yourdomain.com/phpmyadmin.
+
+Step 11: Install Let’s Encrypt SSL
+
+	* HTTPS is a protocol for secure communication between a server (instance) and a client (web browser). Due to the introduction of Let’s Encrypt, which provides free SSL certificates, HTTPS are adopted by everyone and also provides trust to your audiences.
+
+	sudo apt install python3-certbot-apache
+
+	* Now we have installed Certbot by Let’s Encrypt for Ubuntu 22.04, run this command to receive your certificates.
+
+	sudo certbot --apache --agree-tos --redirect -m youremail@email.com -d domainname.com -d www.domainname.com
+
+	OR
+
+	certbot --authenticator standalone --installer apache -d <domain> --pre-hook "service apache2 stop" --post-hook "service apache2 start"
+
+	* This command will install Free SSL, configure redirection to HTTPS and restarts the Apache server.
+
+Step 12: Renewing SSL Certificate
+
+	* Certificates provided by Let’s Encrypt are valid for 90 days only, so you need to renew them often. So, let’s test the renewal feature using the following command.
+
+	sudo certbot renew --dry-run
+
+	* This command will test the certificate expiry and configures the auto-renewable feature.
+
+Step: 13: Test the Setup
+
+	* Once you have done the able steps you can create a new test PHP file in your web directory.
+
+	sudo nano /var/www/html/domainname/public/info.php
+
+	* Paste the below code inside the file.
+
+	* Save the file.
+
+	* Now go ahead and check your domain name with the info.php in the url (domainname.com/info.php).
+
+	* You will see that your domain got redirected to HTTPS and see the PHP information details.
