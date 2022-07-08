@@ -43,7 +43,7 @@
                             <div class="single-blog-post blog-grid-post">
                                 <div class="blog-post-media">
                                     <div class="blog-post-video">
-                                        <iframe src="https://www.youtube.com/watch?v=-4swGz905uk" allow="autoplay; encrypted-media" allowfullscreen="" width="540" height="260"></iframe>
+                                        <iframe src="https://www.youtube.com/embed/-4swGz905uk" allow="autoplay; encrypted-media" allowfullscreen="" width="540" height="260"></iframe>
                                     </div>
                                 </div>
                             </div>
