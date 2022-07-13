@@ -81,7 +81,8 @@ $(function () {
                 <li><span>Event Catgory:</span> ${media.media_event_category}</li>
                 <li><span>Event Location:</span>${media.media_event_location}</li>
                 <li><span>Uploded At:</span> ${moment.unix(media.media_created_at).format('MMMM Do YYYY, h:mm:ss a')}</li>
-                <li><span>Status Of Upload</span> ${media.media_status}</li>`
+                <li><span>Status Of Upload:</span> ${media.media_status}</li>
+                <li><span>Photographer:</span> <a href="photoman?staffid=${media.user_id}">${media.uploader}</a></li>`
             );
             $('#media-count').text(`${totalRecords == 1 ? totalRecords + ' other media in the same event' : totalRecords == 0 ? 'No other media in the same event' : totalRecords + ' other media in the same event' }`);
             $('#rating-form #media_id').val(media.media_id);
