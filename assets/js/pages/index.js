@@ -18,6 +18,8 @@ $(function () {
 		await loadRecentNews();
 
 		await previewEvent();
+
+		openNews();
 	});
 
 	async function loadRecentCategories()
@@ -231,7 +233,7 @@ $(function () {
 			{
 				html += `
 					<!-- single item -->
-                    <article class="blog-post">
+                    <article class="blog-post" news-id="${news[i].news_id}">
                         <div class="blog-post-top">
                             <div class="blog-img">
                                 <img src="${news[i].news_cover_image_url}" alt="${news[i].news_title}" />
@@ -348,6 +350,19 @@ $(function () {
 				eventModal.find('.old-price').text(`NGN ${formatNumber(albumPrice)}`);
 				eventModal.find('.event-description').html(`${truncateString(stripHtmlTags(event.media_event_description), 250)}`);
 				eventModal.find('.btn-add-to-cart').attr('data-id', event.media_event_id);
+
+				//social medial share
+		        eventModal.find('.fb-share').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=https://photoman.ng/event?eventid=' + eventID);
+		        eventModal.find('.tw-share').attr('href', 'https://twitter.com/share?url=https://photoman.ng/event?eventid=' + eventID+'&amp;text=photoman&amp;hashtags=Photoman');
+
+		        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) 
+		        {
+		            eventModal.find('.wa-share').attr('href', 'whatsapp://send?text=https://photoman.ng/event?eventid=' + eventID);
+		        }
+		        else
+		        {
+		            eventModal.find('.wa-share').attr('href', 'https://web.whatsapp.com/send?text=https://photoman.ng/event?eventid=' + eventID);
+		        }
 				
 				owl.html(html1);
 
@@ -392,6 +407,15 @@ $(function () {
 				showSimpleMessage("Attention", e.message, "error");	
 			}
 
+		})
+	}
+
+	function openNews()
+	{
+		$('.blog-area').on('click', 'article', function(){
+			var newsID = $(this).attr('news-id');
+
+			window.location = `news-article?newsid=${newsID}`;
 		})
 	}
 });

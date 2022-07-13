@@ -56,7 +56,7 @@
 					<!--Main Navigation Start -->
 					<div class="main-navigation d-none d-lg-block">
 						<ul>
-							<li><a href="index">Home</a></li>
+							<li><a href="/">Home</a></li>
 							<li><a href="explore">Explore</a></li>
 							<li><a href="events">Events</a></li>
 							<li class="menu-dropdown">
@@ -65,7 +65,7 @@
 									<li><a href="cart">My Cart</a></li>
 									<li><a href="checkout">Check Out</a></li>
 									<li><a href="news">Blog</a></li>
-									<li><a href="apply">Photoman Application</a></li>
+									<li><a href="#">Photoman Application</a></li>
 								</ul>
 							</li>
 							<li class="menu-dropdown">
@@ -99,7 +99,7 @@
 						<!--Contact info Start -->
 						<div class="contact-link">
 							<div class="phone">
-								<p>Call us:</p>
+								<p>Whatsapp:</p>
 								<a href="https://wa.me/2348160051310" target="_blank">(+234)08160051310</a>
 							</div>
 						</div>
@@ -113,9 +113,6 @@
 										<ul style="width: 230px !important"></ul>
 									</div>
 									<div class="shopping-cart-total">
-										<!-- <h4>Subtotal : <span>$20.00</span></h4>
-										<h4>Shipping : <span>$7.00</span></h4>
-										<h4>Taxes : <span>$0.00</span></h4> -->
 										<h4 class="shop-total">Total : <span>NGN 0</span></h4>
 									</div>
 									<div class="shopping-cart-btn text-center">
@@ -133,7 +130,7 @@
 				<div class="mobile-menu">
 					<nav id="mobile-menu-active">
 						<ul class="menu-overflow">
-							<li><a href="index">Home</a></li>
+							<li><a href="/">Home</a></li>
 							<li><a href="explore">Explore</a></li>
 							<li><a href="events">Events</a></li>
 							<li>
@@ -142,7 +139,7 @@
 									<li><a href="cart">My Cart</a></li>
 									<li><a href="checkout">Check Out</a></li>
 									<li><a href="news">Blog</a></li>
-									<li><a href="apply">Photoman Application</a></li>
+									<li><a href="#">Photoman Application</a></li>
 								</ul>
 							</li>
 							<li>

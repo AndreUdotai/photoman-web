@@ -465,7 +465,7 @@ $(function () {
         $('#my_order_items').on('click', '.btn-download, tr', function(e){
             e.preventDefault();
 
-            var mediaID = $(this).get(0).nodeName == "A" ? $(this).parents('tr').attr('data-id') : $(this).attr('id');
+            var mediaID = $(this).get(0).nodeName == "A" ? $(this).parents('tr').attr('data-id') : $(this).attr('data-id');
 
             blockUI();
 

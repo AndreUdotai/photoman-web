@@ -273,21 +273,18 @@
 									<div class="pro-details-social-info">
 										<span>Share</span>
 										<div class="social-info">
-											<ul>
-												<li>
-													<a href="#"><i class="ion-social-facebook"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="ion-social-twitter"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="ion-social-google"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="ion-social-instagram"></i></a>
-												</li>
-											</ul>
-										</div>
+	                                        <ul>
+	                                            <li>
+	                                                <a href="#" class="fb-share" target="_blank"><i class="ion-social-facebook"></i></a>
+	                                            </li>
+	                                            <li>
+	                                                <a href="#" class="tw-share" target="_blank"><i class="ion-social-twitter"></i></a>
+	                                            </li>
+	                                            <li>
+	                                                <a href="#" class="wa-share" target="_blank"><i class="ion-social-whatsapp"></i></a>
+	                                            </li>
+	                                        </ul>
+	                                    </div>
 									</div>
 									<div class="pro-details-policy">
 	                                    <ul>

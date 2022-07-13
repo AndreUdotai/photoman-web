@@ -767,11 +767,11 @@ function setupCart(cartToken)
         cartHtml += `
             <li class="single-shopping-cart" data-id="${items[i].cart_item_uuid}">
                 <div class="shopping-cart-img">
-                    <a href="media?id=${items[i].media_uuid}"><img alt="${items[i].media_uuid}" src="${items[i].media_thumbnail_url}" /></a>
+                    <a href="media?mediaid=${items[i].media_id}"><img alt="${items[i].media_event}" src="${items[i].media_thumbnail_url}" /></a>
                     <span class="product-quantity">1x</span>
                 </div>
                 <div class="shopping-cart-title">
-                    <h4><a href="media?id=${items[i].media_uuid}">${truncateString(items[i].media_event, 16)}</a></h4>
+                    <h4><a href="media?mediaid=${items[i].media_id}">${truncateString(items[i].media_event, 16)}</a></h4>
                     <span>NGN ${formatNumber(items[i].amount)}</span>
                     <div class="shopping-cart-delete">
                         <a href="#"><i class="ion-android-cancel"></i></a>
