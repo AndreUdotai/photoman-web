@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="about-title">
-                                <h2>Ekikere Usoro</h2>
+                                <h2>Ubong Udotai Andre</h2>
                             </div>
                             <p class="mb-30px">
                                 Ubong is a software development enthusiast and a MERN developer (MongoDB, Express, React and NodeJS). He currently manages software development lifecycle from building user stories to ensuring software applications meet companies’ business expectations. Born and raised in Akwa Ibom, Nigeria, he hopes to be in global software development conversations.
