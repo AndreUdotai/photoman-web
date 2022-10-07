@@ -39,7 +39,7 @@
             <section class="about-area">
                 <div class="container container-2">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
                             <div class="single-blog-post blog-grid-post mb-30px">
                                 <div class="blog-post-media">
                                     <div class="blog-post-video">
@@ -54,7 +54,7 @@
                                 Ekikere Usoro is a seasoned photographer and cinematographer. He has featured on mega projects that highlights the best in the legal space and also the entertainment industry in Nigeria. His favorite types of photography include; nature photography, landscape, portrait, and abstract photography…
                             </p>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
                             <div class="single-blog-post blog-grid-post mb-30px">
                                 <div class="blog-post-media">
                                     <div class="blog-post-video">
@@ -69,7 +69,7 @@
                                 Ubong is a software development enthusiast and a MERN developer (MongoDB, Express, React and NodeJS). He currently manages software development lifecycle from building user stories to ensuring software applications meet companies’ business expectations. Born and raised in Akwa Ibom, Nigeria, he hopes to be in global software development conversations.
                             </p>
                         </div>
-                        <div class="col-lg-4">
+                        <!-- <div class="col-lg-4">
                             <div class="single-blog-post blog-grid-post mb-30px">
                                 <div class="blog-post-media">
                                     <div class="blog-post-video">
@@ -83,7 +83,7 @@
                             <p class="mb-30px">
                                 Ubong is a software development enthusiast and a MERN developer (MongoDB, Express, React and NodeJS). He currently manages software development lifecycle from building user stories to ensuring software applications meet companies’ business expectations. Born and raised in Akwa Ibom, Nigeria, he hopes to be in global software development conversations.
                             </p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
