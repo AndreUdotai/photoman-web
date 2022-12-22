@@ -23,6 +23,12 @@ $(function () {
 
 		await previewEvent();
 
+		await listCategories();
+
+		await autoSuggestions();
+
+		await loadSearchResults();
+
 		loadStates();
 
 		filterByState(Limit, 0)
@@ -30,17 +36,9 @@ $(function () {
 
 	async function loadEvents(limit, page)
 	{
-		var states = getUrlParameter('state') ? [getUrlParameter('state')] : [];
-
-        $.each($(".state-filter:checked"), function(){
-            states.push($(this).attr('data-id'));
-        });
-
-        var statesImploded = states.join(',');
-
 		const categorySlug = getUrlParameter('category') ? getUrlParameter('category') : '';
 		const searchTerm = getUrlParameter('search') ? getUrlParameter('search') : '';
-		const state = statesImploded ? statesImploded : getUrlParameter('state') ? getUrlParameter('state') : '';
+		const state = getUrlParameter('state') ? getUrlParameter('state') : '';
 		const sortBy = $('#sortBy').find('option:selected').val();
 
 		try
@@ -172,19 +170,10 @@ $(function () {
 
 	async function listPages(limit, page)
     {
-    	var states = getUrlParameter('state') ? [getUrlParameter('state')] : [];
-
-        $.each($(".state-filter:checked"), function(){
-            states.push($(this).attr('data-id'));
-        });
-
-        var statesImploded = states.join(',');
-
-		const categorySlug = getUrlParameter('category') ? getUrlParameter('category') : '';
+    	const categorySlug = getUrlParameter('category') ? getUrlParameter('category') : '';
 		const searchTerm = getUrlParameter('search') ? getUrlParameter('search') : '';
-		const state = statesImploded ? statesImploded : getUrlParameter('state') ? getUrlParameter('state') : '';
+		const state = getUrlParameter('state') ? getUrlParameter('state') : '';
 		const sortBy = $('#sortBy').find('option:selected').val();
-
 
     	try
     	{
@@ -418,17 +407,23 @@ $(function () {
             var html = ``;
             
             $.each( data, function( key, val ) {
-                html += `
+                /*html += `
                 	<li>
                         <div class="sidebar-widget-list-left">
                             <input type="checkbox" class="state-filter" data-id="${encodeURI(data[key].state)}" /> <a href="events?state=${encodeURI(data[key].state)}">${data[key].state} </a>
                             <span class="checkmark"></span>
                         </div>
                     </li>
+                `;*/
+
+                html += `
+                    <option value="${encodeURI(data[key].state)}">${data[key].state}</option>
                 `;
             });
 
-            $('.state-list ul').html(html);
+            ///$('.state-list ul').html(html);
+            $('#state-list').append(html);
+            $('#state-list').niceSelect('update');
         });
     }
 
@@ -465,4 +460,119 @@ $(function () {
     		listPages(limit, page)
     	});
     }
+
+    async function listCategories()
+    {
+        try
+        {
+            const response = await $.ajax({
+                type:'GET',
+                url:`${API_URL_ROOT}/media-event-categories?status=Active`,
+                dataType:'json'
+            });
+
+            const categories = response.result.mediaEventCategories;
+
+            const categoryList = $('#category-list');
+
+            let categoryHTML = '';
+
+            for(var i = 0; i < categories.length; i++)
+            {
+                categoryHTML += `
+                    <option value="${categories[i].media_event_category_slug}">${categories[i].media_event_category}</option>
+                `;
+            } 
+
+            categoryList.append(categoryHTML);
+            categoryList.niceSelect('update');
+        }
+        catch(e)
+        {
+            showSimpleMessage("Attention", e.message, "error");
+        }
+    }
+
+    async function autoSuggestions()
+	{
+		$('.search-box').on('keyup', function(){
+			var value = $(this).val();
+
+			if(value)
+			{
+				$('.search-results').css('display', 'inline-block');
+
+				$.ajax({
+					type:'GET',
+					url: `${API_URL_ROOT}/media-events?status=Active&search=${value}&sortBy=name_asc`,
+					dataType:'json',
+					success:function(response)
+					{
+						if(response.error == false)
+						{
+							const events = response.result.mediaEvents;
+
+							const totalRecords = response.result.total_records;
+
+							var html = `<p><b><i>${totalRecords !== 1 ? `${totalRecords} records found` : `<b><i>${totalRecords} record found`}</i></b></p><hr>`;
+
+							for(var i = 0; i < events.length; i++)
+							{
+								var event = events[i];
+
+								html += `
+									<p class="search-result" style="cursor:pointer">
+										${event.media_event.trim()}
+									</p>
+									<hr>
+									<!-- end col -->
+								`;
+							}
+
+							$('.search-results').html(html);
+						}
+						else
+						{
+							console.log(response.message)
+						}
+					},
+					error:function(req, status, error)
+					{
+						console.log(req.responseText)
+					}
+				});
+			}
+			else
+			{
+				$('.search-results').css('display', 'none');
+			}
+		});
+
+		$('.search-results').on('click', '.search-result', function(){
+			var event = $(this).text();
+
+			$('.search-box').val(event.trim());
+
+			$('.search-results').css('display', 'none');
+		});
+
+		$('body').on('click', function(){
+			$('.search-results').css('display', 'none');
+		})
+	}
+
+	async function loadSearchResults()
+	{
+		$('.btn-filter').on('click', function(){
+
+			var keyword = $('.search-box').val();
+			var categorySlug = $('#category-list').find('option:selected').val();
+			var state = $('#state-list').find('option:selected').val();
+
+			
+			blockUI();
+
+			window.location = `events?search=${keyword}&category=${categorySlug}&state=${state}`;
+		})
+	}
 });

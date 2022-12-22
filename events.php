@@ -6,6 +6,37 @@
         <?php include 'includes/head.php'; ?>
 
         <title>Photoman - Events</title>
+
+        <style type="text/css">
+            .list-dropdown .nice-select .list {
+                max-height: 300px;
+                width: 100%;
+                overflow-y: scroll !important;
+            }
+
+            .list-dropdown .nice-select {
+                min-width: 100% !important;
+                width: 100%;
+                border-radius: 20px
+            }
+
+            .shop-select {
+                max-width: 100%;
+            }
+
+            .search-box {
+                width: 100%;
+                border-radius: 20px;
+                height: 42px;
+                padding-left: 18px;
+                padding-right: 30px;
+                position: relative;
+                text-align: left !important;
+                outline:none;
+                border: solid 1px #e8e8e8;
+                color:black;
+            }
+        </style>
     </head>
 
     <body onload="displayUserProfile(); addToCart(); loadMyCart(); removeFromCart();">
@@ -94,16 +125,31 @@
                         </div>
                         <!-- Sidebar Area Start -->
                         <div class="col-lg-3 order-lg-first col-md-12 order-md-last mb-res-md-60px mb-res-sm-60px">
-                            <div class="left-sidebar">
+                            <div class="left-sidebar mb-30px">
                                 <div class="sidebar-heading">
                                     <div class="main-heading">
                                         <h2>Filter By</h2>
                                     </div>
-                                    <!-- Sidebar single item -->
-                                    <div class="sidebar-widget">
-                                        <h4 class="pro-sidebar-title">State</h4>
-                                        <div class="sidebar-widget-list state-list">
-                                            <ul></ul>
+
+                                    <div class="shop-select" style="display: inline-block; margin-bottom: 30px; width: 100% !important">
+                                        <input id="search-box" placeholder="Search Term" type="text" class="required search-box" />
+                                    </div>
+                                    <div class="search-results contact-form-style-1" style="width:100%; padding:5px; display:none; font-size:12px; height: 500px; overflow-y: scroll;"></div>
+
+                                    <div class="shop-select list-dropdown" style="display: inline-block; margin-bottom: 30px; width: 100% !important">
+                                        <select id="state-list">
+                                            <option value="">State</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="shop-select list-dropdown" style="display: inline-block; width: 100% !important">
+                                        <select id="category-list">
+                                            <option value="">Category</option>
+                                        </select>
+                                    </div>
+                                    <div class="your-order-area mt-25">
+                                        <div class="Place-order">
+                                            <a class="btn-hover btn-filter" href="javascript:void()">Filter</a>
                                         </div>
                                     </div>
                                     <!-- Sidebar single item -->
@@ -190,6 +236,6 @@
 
         <?php include 'includes/js.php'; ?>
 
-        <script src="assets/js/pages/events.js"></script>
+        <script src="assets/js/pages/events.js?v=1"></script>
     </body>
 </html>

@@ -43,9 +43,80 @@
                                 <div id="faq" class="panel-group">
                                     <div class="panel panel-default single-my-account">
                                         <div class="panel-heading my-account-title">
-                                            <h3 class="panel-title"><span>1 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-1">Edit your account information </a></h3>
+                                            <h3 class="panel-title"><span>1 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-5">My Account </a></h3>
                                         </div>
-                                        <div id="my-account-1" class="panel-collapse collapse show">
+                                        <div id="my-account-5" class="panel-collapse collapse show">
+                                            <div class="panel-body">
+                                                <div class="contact-area mtb-60px">
+                                                    <div class="container">
+                                                        <div class="custom-row-2">
+                                                            <div class="col-12">
+                                                                <div class="contact-info-wrap">
+                                                                    <center>
+                                                                        <img class="rounded-circle user-avatar" width="200" height="200" alt="no profile image">
+                                                                    </center>
+                                                                    <div class="single-contact-info">
+                                                                        <div class="contact-icon">
+                                                                            <i class="fa fa-user"></i>
+                                                                        </div>
+                                                                        <div class="contact-info-dec">
+                                                                            <p class="user-full-name"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="single-contact-info">
+                                                                        <div class="contact-icon">
+                                                                            <i class="fa fa-tags"></i>
+                                                                        </div>
+                                                                        <div class="contact-info-dec">
+                                                                            <p class="user-gender"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="single-contact-info">
+                                                                        <div class="contact-icon">
+                                                                            <i class="fa fa-envelope"></i>
+                                                                        </div>
+                                                                        <div class="contact-info-dec">
+                                                                            <p class="user-email"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="single-contact-info">
+                                                                        <div class="contact-icon">
+                                                                            <i class="fa fa-phone"></i>
+                                                                        </div>
+                                                                        <div class="contact-info-dec">
+                                                                            <p class="user-phone"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="single-contact-info">
+                                                                        <div class="contact-icon">
+                                                                            <i class="fa fa-home"></i>
+                                                                        </div>
+                                                                        <div class="contact-info-dec">
+                                                                            <p class="user-contact-address"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="single-contact-info">
+                                                                        <div class="contact-icon">
+                                                                            <i class="fa fa-map-marker-alt"></i>
+                                                                        </div>
+                                                                        <div class="contact-info-dec">
+                                                                            <p class="user-state"></p>
+                                                                            <p class="user-lg"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default single-my-account">
+                                        <div class="panel-heading my-account-title">
+                                            <h3 class="panel-title"><span>2 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-1">Edit your account information </a></h3>
+                                        </div>
+                                        <div id="my-account-1" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 <form id="update-account" enctype="multipart/form-data">
                                                     <div class="myaccount-info-wrapper">
@@ -94,13 +165,13 @@
                                                             </div>
                                                             
                                                             <div class="col-lg-6 col-md-16 rating-form-style mb-15">
-                                                                <label>State of location <span class="red-asteriks">*</span></label>
+                                                                <label>State <span class="red-asteriks">*</span></label>
                                                                 <select class="required" id="state" name="state">
                                                                     <option value="">Select State</option>
                                                                 </select>
                                                             </div>
                                                             <div class="col-lg-6 col-md-16 rating-form-style mb-15">
-                                                                <label>LGA / City of location <span class="red-asteriks">*</span></label>
+                                                                <label>City <span class="red-asteriks">*</span></label>
                                                                 <select class="required" id="lg" name="lg">
                                                                     <option value="">Select LGA</option>
                                                                 </select>
@@ -117,7 +188,7 @@
                                                                 <a href="#"><i class="fa fa-arrow-up"></i> back</a>
                                                             </div>
                                                             <div class="billing-btn">
-                                                                <button type="submit">Continue</button>
+                                                                <button type="submit">Update</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -127,7 +198,7 @@
                                     </div>
                                     <div class="panel panel-default single-my-account">
                                         <div class="panel-heading my-account-title">
-                                            <h3 class="panel-title"><span>2 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-2">Change your password </a></h3>
+                                            <h3 class="panel-title"><span>3 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-2">Change your password </a></h3>
                                         </div>
                                         <div id="my-account-2" class="panel-collapse collapse">
                                             <div class="panel-body">
@@ -181,7 +252,7 @@
                                     </div>
                                     <div class="panel panel-default single-my-account">
                                         <div class="panel-heading my-account-title">
-                                            <h3 class="panel-title"><span>3 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-3">My Orders </a></h3>
+                                            <h3 class="panel-title"><span>4 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-3">My Orders </a></h3>
                                         </div>
                                         <div id="my-account-3" class="panel-collapse collapse">
                                             <div class="panel-body">
@@ -224,7 +295,7 @@
                                     </div>
                                     <div class="panel panel-default single-my-account">
                                         <div class="panel-heading my-account-title">
-                                            <h3 class="panel-title"><span>4 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-4">My Inbox </a></h3>
+                                            <h3 class="panel-title"><span>5 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-4">My Inbox </a></h3>
                                         </div>
                                         <div id="my-account-4" class="panel-collapse collapse">
                                             <div class="panel-body">
@@ -339,6 +410,6 @@
         <?php include 'includes/js.php'; ?>
 
         <!-- page script -->
-        <script src="assets/js/pages/account.js"></script>
+        <script src="assets/js/pages/account.js?v=1"></script>
     </body>
 </html>

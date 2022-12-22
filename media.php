@@ -84,7 +84,7 @@
                                 <div class="pro-details-policy">
                                     <ul>
                                         <li><img src="assets/images/icons/policy.png" alt="" /><span>Seamless Delivery to Your Email Address</span></li>
-                                        <li><img src="assets/images/icons/policy-2.png" alt="" /><span>2 Days Money-Back Guarantee</span></li>
+                                        <!-- <li><img src="assets/images/icons/policy-2.png" alt="" /><span>2 Days Money-Back Guarantee</span></li> -->
                                         <li><img src="assets/images/icons/policy-3.png" alt="" /><span>Fast & Secure Payment Options</span></li>
                                     </ul>
                                 </div>

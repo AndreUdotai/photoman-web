@@ -30,7 +30,7 @@
 									Capturing Your Best Moments <br>In High Definition
 								</h1>
 								<p class="animated">Please take a few minutes to get to know us.</p>
-								<a href="about" class="shop-btn animated">MORE</a>
+								<a href="about" class="shop-btn animated">More</a>
 							</div>
 						</div>
 					</div>
@@ -44,7 +44,7 @@
 									Attend events while we save your memories
 								</h1>
 								<p class="animated">Search for events here</p>
-								<a href="events" class="shop-btn animated">EVENTS</a>
+								<a href="events" class="shop-btn animated">Events</a>
 							</div>
 						</div>
 					</div>
@@ -58,7 +58,7 @@
 									Our Photographers Are In Every<br> State in Nigeria
 								</h1>
 								<p class="animated">Get Familiar With Them</p>
-								<a href="photomen" class="shop-btn animated">PHOTOGRAPHERS</a>
+								<a href="photomen" class="shop-btn animated" style="width: auto; padding-left: 20px; padding-right: 20px">Our Photographers</a>
 							</div>
 						</div>
 					</div>
@@ -103,7 +103,7 @@
 									<img src="assets/images/icons/static-icons-2.png" alt="" class="img-responsive" />
 									<div class="single-static-meta">
 										<h4>We are available in the 36 states</h4>
-										<p>You can view event photographs by locations</p>
+										<p>View event images by location</p>
 									</div>
 								</div>
 							</div>
@@ -183,8 +183,7 @@
                         <div class="col-md-12">
                             <!-- Section title -->
                             <div class="section-title">
-                                <h2>Latest News</h2>
-                                <p>We will always keep you abbreast with today's activities</p>
+                                <h2>Recent Posts</h2>
                             </div>
                             <!-- Section title -->
                         </div>

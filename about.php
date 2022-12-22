@@ -73,6 +73,76 @@
                 </div>
             </section>
 
+            <!-- Breadcrumb Area start -->
+            <section class="breadcrumb-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="breadcrumb-content">
+                                <h1 class="breadcrumb-hrading">The Team</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Breadcrumb Area End -->
+
+            <!-- About Area Start -->
+            <section class="about-area">
+                <div class="container container-2">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="single-blog-post blog-grid-post mb-30px">
+                                <div class="blog-post-media">
+                                    <div class="blog-post-video">
+                                        <img src="assets/images/team/ekikere.jpeg" width="400" height="400" class="rounded-circle">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-title" style="margin-bottom:20px">
+                                <h2>Ekikere Usoro</h2>
+                                <p style="margin-top: 10px"><b>Team Lead – Photography Projects</b></p>
+                            </div>
+                            <p style="margin-bottom:30px; text-align: justify;">
+                                Ekikere Usoro is a seasoned photographer and cinematographer. He has been featured on mega projects that highlight the best in the legal space and also the entertainment industry in Nigeria. His favorite types of photography includenature photography, landscape, portrait, and abstract photography…
+                            </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="single-blog-post blog-grid-post mb-30px">
+                                <div class="blog-post-media">
+                                    <div class="blog-post-video">
+                                        <img src="assets/images/team/andre.jpg" width="400" height="400" class="rounded-circle">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-title" style="margin-bottom:20px">
+                                <h2>Ubong Udotai Andre</h2>
+                                <p style="margin-top: 10px"><b>Software Project Manager</b></p>
+                            </div>
+                            <p style="margin-bottom:30px; text-align: justify">
+                                Ubong Udotai is a Software Project Manager at Digital Community and a Full stack Developer with previous experiences as a GIS Specialist and Emergency Communication Centre Supervisor. He enjoys designing epics that best capture business ideas, building software solutions, writing, and researching. When Ubong is not working, he swims, plays table tennis, or pool.
+                            </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="single-blog-post blog-grid-post mb-30px">
+                                <div class="blog-post-media">
+                                    <div class="blog-post-video">
+                                        <img src="assets/images/team/judith.jpeg" width="400" height="400" class="rounded-circle">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-title" style="margin-bottom:20px">
+                                <h2>Judith Obiekwe</h2>
+                                <p style="margin-top: 10px"><b>Legal Adviser</b></p>
+                            </div>
+                            <p class="mb-30px" style="text-align: justify">
+                                Judith is a lawyer with a specialization in Information Communications and Technology (ICT) Law. She is an Associate of Technology Advisors LLP. She is an associate member of the Nigerian Chartered Institute of Arbitrators. She obtained her LL. B degree from Afe Babalola University and attended the Nigerian Law School (Lagos Campus). She is also a member of the Nigerian Bar Association.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- About Area End -->
 
             <?php include 'includes/footer.php'; ?>

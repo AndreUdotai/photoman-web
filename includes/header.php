@@ -65,7 +65,7 @@
 									<li><a href="cart">My Cart</a></li>
 									<li><a href="checkout">Check Out</a></li>
 									<li><a href="news">Blog</a></li>
-									<li><a href="#">Photoman Application</a></li>
+									<li><a href="competition">Photoman Application</a></li>
 								</ul>
 							</li>
 							<li class="menu-dropdown">
@@ -73,7 +73,6 @@
 								<ul class="sub-menu">
 									<li><a href="about">About Us</a></li>
 									<li><a href="photomen">Our Photographers</a></li>
-									<li><a href="team">The Team</a></li>
 								</ul>
 							</li>
 							<li><a href="contact">Contact Us</a></li>
@@ -100,7 +99,7 @@
 						<div class="contact-link">
 							<div class="phone">
 								<p>Whatsapp:</p>
-								<a href="https://wa.me/2348160051310" target="_blank">(+234)08160051310</a>
+								<a href="https://wa.me/2348160051310" target="_blank">+234 (0) 816 005 1310</a>
 							</div>
 						</div>
 						<!--Contact info End -->
@@ -139,7 +138,7 @@
 									<li><a href="cart">My Cart</a></li>
 									<li><a href="checkout">Check Out</a></li>
 									<li><a href="news">Blog</a></li>
-									<li><a href="#">Photoman Application</a></li>
+									<li><a href="competition">Photoman Application</a></li>
 								</ul>
 							</li>
 							<li>
@@ -147,7 +146,6 @@
 								<ul>
 									<li><a href="about">About Us</a></li>
 									<li><a href="photomen">Our Photographers</a></li>
-									<li><a href="team">The Team</a></li>
 								</ul>
 							</li>
 							<li><a href="contact">Contact Us</a></li>

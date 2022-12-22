@@ -47,7 +47,7 @@
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="contact-info-dec">
-                                        <p>(+234)0 816 005 1310</p>
+                                        <p>+234 (0) 816 005 1310</p>
                                     </div>
                                 </div>
                                 <div class="single-contact-info">

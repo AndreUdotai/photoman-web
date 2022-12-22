@@ -26,6 +26,8 @@ $(function () {
         loadOrderItems();
         //download a specific item
         downloadItem();
+        //download order items
+        downloadItems();
         //load my inbox
         loadInbox();
         //inbox actions
@@ -92,6 +94,15 @@ $(function () {
         $('#user_email').val(payloadClaim(token, 'user_email'));
         $('#user_phone').val(payloadClaim(token, 'user_phone'));
         $('#user_contact_address').val(payloadClaim(token, 'user_contact_address'));
+
+        $('.user-avatar').attr({src:payloadClaim(token, 'user_image_url'), alt:payloadClaim(token, 'user_firstname')});
+        $('.user-full-name').text(`${payloadClaim(token, 'user_firstname')} ${payloadClaim(token, 'user_lastname')}`);
+        $('.user-gender').text(payloadClaim(token, 'user_gender'));
+        $('.user-email').html(`<a href="mailto:${payloadClaim(token, 'user_email')}"> ${payloadClaim(token, 'user_email')}</a>`);
+        $('.user-phone').html(`<a href="tel:${payloadClaim(token, 'user_phone')}"> ${payloadClaim(token, 'user_phone')}</a>`);
+        $('.user-contact-address').text(payloadClaim(token, 'user_contact_address'));
+        $('.user-state').text(payloadClaim(token, 'user_state'));
+        $('.user-lg').text(payloadClaim(token, 'user_lg'));
 
         setTimeout(function(){
             $('#state').val(payloadClaim(token, 'user_state'));
@@ -189,6 +200,7 @@ $(function () {
                             if(response.error == false)
                             {
                                 var newToken = response.token;
+
                                 sessionStorage.removeItem('token');
                                 sessionStorage.setItem('token', newToken);
 
@@ -196,6 +208,8 @@ $(function () {
 
                                 unblockUI();
                                 showSimpleMessage("Success", response.message, "success");
+
+                                window.location.reload();
                             }
                             else
                             {
@@ -324,9 +338,9 @@ $(function () {
             lengthMenu: [7, 10, 20, 50, 100],
             stripeClasses: [],
             drawCallback: function () { $('.dataTables_paginate > .pagination').addClass(' pagination-style-13 pagination-bordered mb-5'); },
-            'createdRow': function( row, data, dataIndex, cells ) {
+            /* 'createdRow': function( row, data, dataIndex, cells ) {
                 $(row).attr({'data-toggle':'modal', 'data-target':'#orderModal', 'data-animation':'fall', 'data-plugin':'custommodal', 'data-overlayColor':'#012'});
-            },
+            }, */
             language: {
                 infoEmpty: "<span style='color:red'><b>No records found</b></span>"
             },
@@ -387,7 +401,21 @@ $(function () {
                     render: function(data, type, row, meta)
                     {
                         var actions = `
-                            <a href="javascript:void(0);" class="btn btn-link font-18 text-muted btn-sm btn-view" title="View Order Items" data-id="`+data+`" data-toggle="modal" data-target="#orderModal" data-animation="fall" data-plugin="custommodal" data-overlayColor="#012"><i class="ion-search"></i>
+                            <a href="javascript:void(0);" 
+                                class="btn btn-link font-18 text-muted btn-sm btn-view" title="View Order Items" 
+                                data-id="`+data+`" 
+                                data-toggle="modal" 
+                                data-target="#orderModal" 
+                                data-animation="fall" 
+                                data-plugin="custommodal" 
+                                data-overlayColor="#012">
+                                <i class="ion-search"></i>
+                            </a>
+                            <a href="javascript:void(0);" 
+                                data-id="${data}"
+                                class="btn btn-link font-18 text-muted btn-sm btn-download" 
+                                title="Download Media"> 
+                                <i class="ion-android-download"></i>
                             </a>
                         `;
 
@@ -402,9 +430,9 @@ $(function () {
 
     function loadOrderItems()
     {
-        $('#my_orders').on('click', '.btn-view, tr', function(){
+        $('#my_orders').on('click', '.btn-view', function(){
 
-            var orderID = $(this).get(0).nodeName == "A" ? $(this).attr('data-id') : $(this).attr('id');
+            var orderID = $(this).attr('data-id');
 
             blockUI();
 
@@ -472,28 +500,25 @@ $(function () {
             $.ajax({
                 type:'GET',
                 url:`${API_URL_ROOT}/media/download/${mediaID}`,
-                dataType:'json',
-                headers:{ 'x-access-token':token},
-                success:function(response)
-                {
-                    if(response.error == false)
-                    {
-                        unblockUI();
-                        var downloadURL = response.downloadURL;
-                        $('#orderModal .close').click();
-                        window.open(downloadURL);
-                    }
-                    else
-                    {
-                        unblockUI();
-                        showSimpleMessage("Attention", response.message, "error");
-                    }
-                },
-                error:function(req, status, error)
-                {
-                    unblockUI();
-                    showSimpleMessage("Attention", "ERROR - "+req.status+" : "+req.statusText, "error");
-                }
+                headers:{ 'x-access-token':token}
+            });
+
+            unblockUI();
+        })
+    }
+
+    function downloadItems()
+    {
+        $('#my_orders').on('click', '.btn-download', function(e){
+            e.preventDefault();
+
+            var orderID = $(this).attr('data-id');
+
+            //blockUI();
+
+            $.ajax({
+                type:'GET',
+                url:`${API_URL_ROOT}/orders/download/${orderID}`,
             })
         })
     }

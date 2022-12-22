@@ -11,12 +11,12 @@
 					</div>
 					<!-- footer logo -->
 					<div class="about-footer">
-						<p class="text-info">Photoman connects photographers with customers using unique technology solutions that create a community between both parties.</p>
+						<p class="text-info">Photoman connects photographers with customers using unique technology solutions that create a community for both parties.</p>
 						<div class="need-help">
 							<p class="phone-info">
 								NEED HELP?
 								<span>
-									(+234)0 816 005 1310
+									+234 (0) 816 005 1310
 								</span>
 							</p>
 						</div>
@@ -72,7 +72,7 @@
 					<div class="single-wedge">
 						<h4 class="footer-herading">Newsletter</h4>
 						<div class="subscrib-text">
-							<p>You may unsubscribe at any moment. For that purpose, please find our contact info in the legal notice.</p>
+							<p>Subscribe to our newsletter. Be the first to know about upcoming features and new product offerings.</p>
 						</div>
 						<div id="mc_embed_signup" class="subscribe-form">
 							<form id="mc-embedded-subscribe-form">
