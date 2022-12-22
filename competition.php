@@ -43,7 +43,7 @@
                             <div class="single-blog-post blog-grid-post">
                                 <div class="blog-post-media">
                                     <div class="blog-post-video">
-                                        <img src="assets/images/feature-bg/competition1.jpg" width="400" height="400" class="rounded-circle">
+                                        <img src="assets/images/feature-bg/competition1.jpg" width="400" height="400" class="rounded-circle img-responsive">
                                     </div>
                                 </div>
                             </div>
