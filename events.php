@@ -236,6 +236,6 @@
 
         <?php include 'includes/js.php'; ?>
 
-        <script src="assets/js/pages/events.js?v=1"></script>
+        <script src="assets/js/pages/events.js?v=2"></script>
     </body>
 </html>

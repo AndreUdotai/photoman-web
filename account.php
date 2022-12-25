@@ -41,6 +41,70 @@
                         <div class="ml-auto mr-auto col-lg-9">
                             <div class="checkout-wrapper">
                                 <div id="faq" class="panel-group">
+                                    <div class="panel panel-default single-my-account applicant">
+                                        <div class="panel-heading my-account-title">
+                                            <h3 class="panel-title"><span style="color: red">*</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-6">Image Upload (For Applicants Only) </a></h3>
+                                        </div>
+                                        <div id="my-account-6" class="panel-collapse collapse show">
+                                            <div class="panel-body">
+                                                <form id="image-upload" enctype="multipart/form-data">
+                                                    <div class="myaccount-info-wrapper">
+                                                        <div class="account-info-wrapper">
+                                                            <h4>Image Upload</h4>
+                                                            <h5>Upload Your Images For The Photoman Competition Here</h5>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="billing-info">
+                                                                    <label>Image Upload (Multiple Images Allowed) <span class="red-asteriks">*</span></label>
+                                                                    <input type="file" id="media" name="media" class="required" accept="image/*" multiple />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="billing-back-btn">
+                                                            <div class="billing-back">
+                                                                <a data-toggle="collapse" data-parent="#faq" href="#my-account-6"><i class="fa fa-arrow-up"></i> back</a>
+                                                            </div>
+                                                            <div class="billing-btn">
+                                                                <button type="submit">Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                                <div class="myaccount-info-wrapper">
+                                                    <div class="account-info-wrapper">
+                                                        <h4>Media Management</h4>
+                                                        <h5>Click the Delete Or the Expand buttons attached to an image to delete OR view images respectively when necessary</h5>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <table id="uploaded-media" class="table activate-select dt-responsive table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>#</th>
+                                                                        <th>Preview</th>
+                                                                        <th>Uploaded At</th>
+                                                                        <th>Actions</th>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody></tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="billing-back-btn">
+                                                        <div class="billing-back">
+                                                            <a data-toggle="collapse" data-parent="#faq" href="#my-account-6"><i class="fa fa-arrow-up"></i> back</a>
+                                                        </div>
+                                                        <!-- <div class="billing-btn">
+                                                            <button type="submit">Continue</button>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="panel panel-default single-my-account">
                                         <div class="panel-heading my-account-title">
                                             <h3 class="panel-title"><span>1 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-5">My Account </a></h3>
@@ -185,7 +249,7 @@
                                                         </div>
                                                         <div class="billing-back-btn">
                                                             <div class="billing-back">
-                                                                <a href="#"><i class="fa fa-arrow-up"></i> back</a>
+                                                                <a data-toggle="collapse" data-parent="#faq" href="#my-account-1"><i class="fa fa-arrow-up"></i> back</a>
                                                             </div>
                                                             <div class="billing-btn">
                                                                 <button type="submit">Update</button>
@@ -239,7 +303,7 @@
                                                         </div>
                                                         <div class="billing-back-btn">
                                                             <div class="billing-back">
-                                                                <a href="#"><i class="fa fa-arrow-up"></i> back</a>
+                                                                <a data-toggle="collapse" data-parent="#faq" href="#my-account-2"><i class="fa fa-arrow-up"></i> back</a>
                                                             </div>
                                                             <div class="billing-btn">
                                                                 <button type="submit">Continue</button>
@@ -283,7 +347,7 @@
                                                     </div>
                                                     <div class="billing-back-btn">
                                                         <div class="billing-back">
-                                                            <a href="#"><i class="fa fa-arrow-up"></i> back</a>
+                                                            <a data-toggle="collapse" data-parent="#faq" href="#my-account-3"><i class="fa fa-arrow-up"></i> back</a>
                                                         </div>
                                                         <!-- <div class="billing-btn">
                                                             <button type="submit">Continue</button>
@@ -325,7 +389,7 @@
                                                     </div>
                                                     <div class="billing-back-btn">
                                                         <div class="billing-back">
-                                                            <a href="#"><i class="fa fa-arrow-up"></i> back</a>
+                                                            <a data-toggle="collapse" data-parent="#faq" href="#my-account-4"><i class="fa fa-arrow-up"></i> back</a>
                                                         </div>
                                                         <!-- <div class="billing-btn">
                                                             <button type="submit">Continue</button>
@@ -410,6 +474,6 @@
         <?php include 'includes/js.php'; ?>
 
         <!-- page script -->
-        <script src="assets/js/pages/account.js?v=1"></script>
+        <script src="assets/js/pages/account.js?v=2"></script>
     </body>
 </html>

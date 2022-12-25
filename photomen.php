@@ -106,6 +106,6 @@
 
         <?php include 'includes/js.php'; ?>
 
-        <script src="assets/js/pages/photomen.js"></script>
+        <script src="assets/js/pages/photomen.js?v=1"></script>
     </body>
 </html>

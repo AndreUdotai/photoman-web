@@ -32,4 +32,4 @@
 <script src="assets/js/datatables/buttons.print.min.js"></script>
 <script src="assets/js/datatables/dataTables.keyTable.min.js"></script>
 <!-- Functions JS -->
-<script src="assets/js/functions.js"></script>
+<script src="assets/js/functions.js?v=1"></script>

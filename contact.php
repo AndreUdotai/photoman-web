@@ -52,11 +52,10 @@
                                 </div>
                                 <div class="single-contact-info">
                                     <div class="contact-icon">
-                                        <i class="fa fa-globe"></i>
+                                        <i class="fa fa-envelope"></i>
                                     </div>
                                     <div class="contact-info-dec">
-                                        <p><a href="mailto:info@photoman.ng">info@photoman.ng</a></p>
-                                        <p><a href="https://photoman.ng">https://photoman.ng</a></p>
+                                        <p><a href="mailto:info@photoman.ng" style="color: blue">info@photoman.ng</a></p>
                                     </div>
                                 </div>
                                 <!-- <div class="single-contact-info">

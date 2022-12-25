@@ -203,6 +203,11 @@ function displayUserProfile()
 
         $('.logged-in-links').css('display', 'inline-block');
         $('.logged-out-links').css('display', 'none');
+
+        if(role !== "Applicant")
+        {
+            $('.applicant').remove();
+        }
     }
     else
     {
@@ -982,4 +987,80 @@ function togglePasswords()
 
         
     })
+}
+
+function p(current, last, width = 2) 
+{    
+    var left = current - width,
+        right = current + width + 1,
+        range = [],
+        rangeWithDots = [],
+        l;
+
+    for (let i = 1; i <= last; i += 1) {
+        
+        if (i === 1 || i === last || (i >= left && i <= right)) 
+        {
+            range.push(i);
+        } 
+        else if (i < left) 
+        {
+            i = left - 1;
+        } 
+        else if (i > right) 
+        {
+            range.push(last);
+            break;
+        }
+    }
+
+    range.forEach(i => {
+        
+        if (l) 
+        {
+            if (i - l === 2) 
+            {
+                rangeWithDots.push(l + 1);
+            } 
+            else if (i - l !== 1) 
+            {
+                rangeWithDots.push('...');
+            }
+        }
+        
+        rangeWithDots.push(i);
+    
+        l = i;
+    });
+
+    return rangeWithDots;
+    
+
+    /*for (let i = 1; i <= last; i++) 
+    {
+        if (i == 1 || i == last || i >= left && i < right) {
+            range.push(i);
+        }
+    }
+
+    for (let i of range) 
+    {
+        if(l) 
+        {
+            if (i - l === 2) 
+            {
+                rangeWithDots.push(l + 1);
+            } 
+            else if (i - l !== 1) 
+            {
+                rangeWithDots.push('...');
+            }
+        }
+
+        rangeWithDots.push(i);
+
+        l = i;
+    }
+
+    return rangeWithDots;*/
 }

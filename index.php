@@ -22,7 +22,7 @@
 			<div class="slider-area home-4">
 				<div class="slider-active-3 owl-carousel slider-hm8 owl-dot-style">
 					<!-- Slider Single Item Start -->
-					<div class="slider-height-6 d-flex align-items-start justify-content-start bg-img" style="background-image: url(assets/images/slider-image/slider1.jpg);">
+					<div class="slider-height-6 d-flex align-items-start justify-content-start bg-img" style="background-image: url(assets/images/slider-image/jumbotron1.jpg);">
 						<div class="container">
 							<div class="slider-content-1 slider-animated-1 text-left">
 								<span class="animated">WHAT MATTERS MOST TO US?</span>
@@ -36,7 +36,7 @@
 					</div>
 					<!-- Slider Single Item End -->
 					<!-- Slider Single Item Start -->
-					<div class="slider-height-6 d-flex align-items-start justify-content-start bg-img" style="background-image: url(assets/images/slider-image/slider2.jpg);">
+					<div class="slider-height-6 d-flex align-items-start justify-content-start bg-img" style="background-image: url(assets/images/slider-image/jumbotron2.jpg);">
 						<div class="container">
 							<div class="slider-content-1 slider-animated-1 text-left">
 								<span class="animated">LIFE IS ABOUT MAKING MEMORIES</span>
@@ -50,7 +50,7 @@
 					</div>
 					<!-- Slider Single Item End -->
 					<!-- Slider Single Item Start -->
-					<div class="slider-height-6 d-flex align-items-start justify-content-start bg-img" style="background-image: url(assets/images/slider-image/slider3.jpg);">
+					<div class="slider-height-6 d-flex align-items-start justify-content-start bg-img" style="background-image: url(assets/images/slider-image/jumbotron3.png);">
 						<div class="container">
 							<div class="slider-content-1 slider-animated-1 text-left">
 								<span class="animated">FORMIDABLE NETWORK</span>
@@ -64,7 +64,7 @@
 					</div>
 					<!-- Slider Single Item End -->
 					<!-- Slider Single Item Start -->
-					<div class="slider-height-6 d-flex align-items-start justify-content-start bg-img" style="background-image: url(assets/images/slider-image/slider4.jpg);">
+					<div class="slider-height-6 d-flex align-items-start justify-content-start bg-img" style="background-image: url(assets/images/slider-image/jumbotron4.jpg);">
 						<div class="container">
 							<div class="slider-content-1 slider-animated-1 text-left" style="color: white !important">
 								<span class="animated">WOULD YOU LIKE TO JOIN PHOTOMAN?</span>
@@ -72,7 +72,7 @@
 									Watch Out For Our Upcoming<br> Photoman Competition 
 								</h1>
 								<p class="animated">Do not only dream, become. </p>
-								<a href="apply" class="shop-btn animated">Apply</a>
+								<a href="compettion" class="shop-btn animated">Apply</a>
 							</div>
 						</div>
 					</div>
@@ -200,22 +200,22 @@
 				<div class="container">
 					<div class="brand-slider owl-carousel owl-nav-style owl-nav-style-2">
 						<div class="brand-slider-item">
-							<a href="#"><img src="assets/images/brand-logo/1.png" alt="" /></a>
+							<a href="https://abujadiplomat.com" target="_blank"><img src="assets/images/brand-logo/abuja-diplomat.png" alt="" /></a>
 						</div>
 						<div class="brand-slider-item">
-							<a href="#"><img src="assets/images/brand-logo/2.png" alt="" /></a>
+							<a href="https://bigwigseries.com" target="_blank"><img src="assets/images/brand-logo/2.png" alt="" /></a>
 						</div>
 						<div class="brand-slider-item">
 							<a href="#"><img src="assets/images/brand-logo/3.png" alt="" /></a>
 						</div>
 						<div class="brand-slider-item">
-							<a href="#"><img src="assets/images/brand-logo/4.png" alt="" /></a>
+							<a href="#"><img src="assets/images/brand-logo/lady-justice.png" alt="" /></a>
 						</div>
 						<div class="brand-slider-item">
 							<a href="#"><img src="assets/images/brand-logo/5.png" alt="" /></a>
 						</div>
 						<div class="brand-slider-item">
-							<a href="#"><img src="assets/images/brand-logo/6.png" alt="" /></a>
+							<a href="#"><img src="assets/images/brand-logo/oneid.png" alt="" /></a>
 						</div>
 						<div class="brand-slider-item">
 							<a href="#"><img src="assets/images/brand-logo/7.png" alt="" /></a>

@@ -10,10 +10,6 @@ $(function () {
 
 	$(document).ready(async function(){
 
-		/*$('body').on('contextmenu', function(e){
-			e.preventDefault();
-		})*/
-
 		await loadMedia(Limit, 0);
 
 		await listPages(Limit, 0);
@@ -43,8 +39,10 @@ $(function () {
 			let html = '';
 			let html1 = '';
 			const media = response.result.media;
+            const totalRecords = response.result.total_records;
 
-			const mediaCount = media.length;
+			const mediaCount = totalRecords;
+
 			let mediaCountNotification = mediaCount  == 1 ? `${mediaCount} record returned` : `${mediaCount} records returned`;
 
 			let mediaGrid = $('#shop-1 .row');
@@ -133,7 +131,7 @@ $(function () {
                                                 <div class="product-intro-info">
                                                     ${truncateString(stripHtmlTags(media[i].media_event_description), 400)}
                                                 </div>
-                                                <div class="in-stock">Availability: <span>400 In Stock</span></div>
+                                                <div class="in-stock">Availability: <span>In Stock</span></div>
                                             </div>
                                             <div class="add-to-link">
                                                 <ul>
@@ -183,21 +181,25 @@ $(function () {
 
 			if(pagination)
 			{
+                window.numpages = pagination.numPages;
+
+                var pages = p(page, pagination.numPages, 2);
+
+                var page = parseInt(page) + 1;
+
 				$('.pro-pagination-style ul').append(`<li><a class="prev" href="javascript:void(0)"><i class="ion-ios-arrow-left"></i></a></li>`);
 
-				for(var i = 1; i <= pagination.numPages; i++)
+				for(var i = 0; i < pages.length; i++)
 				{
-					if(i == 1)
+                    var active = pages[i] == page ? `class="active"` : ``;
+
+					if(pages[i] == "...")
                     {
-                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${i - 1}"><a href="javascript:void(0)" class="active">`+i+`</a></li>`);    
-                    }
-                    else if(i == Math.ceil(pagination.numPages / 2) || i == pagination.numPages)
-                    {
-                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${i - 1}"><a href="javascript:void(0)">`+i+`</a></li>`);
+                        $('.pro-pagination-style ul').append(`<li>...</li>`);
                     }
                     else
                     {
-                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${i - 1}" style="display:none"><a href="javascript:void(0)">`+i+`</a></li>`);
+                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${pages[i] - 1}"><a href="javascript:void(0)" ${active}>${pages[i]}</a></li>`);
                     }
 				}
 
@@ -231,6 +233,7 @@ $(function () {
                 $('.pro-pagination-style ul').find("[page='"+next_page+"']").find('a').addClass('active');
                 
                 loadMedia(Limit, next_page);
+                pagenator(next_page);
             }
         });
 
@@ -251,6 +254,7 @@ $(function () {
                 $('.pro-pagination-style ul').find("[page='"+previous_page+"']").find('a').addClass('active');
                 
                 loadMedia(Limit, previous_page);
+                pagenator(previous_page)
             }
         });
 
@@ -263,6 +267,7 @@ $(function () {
             $('.pro-pagination-style ul').find("[page='"+page+"']").find('a').addClass('active');
             
             loadMedia(Limit, page);
+            pagenator(parseInt(page))
         });
 	}
 
@@ -383,5 +388,34 @@ $(function () {
         {
             $('.wa-share').attr('href', 'https://web.whatsapp.com/send?text=https://photoman.ng/media?mediaid=' + mediaID);
         }
+    }
+
+    function pagenator(page)
+    {
+        var numpages = window.numpages;
+                
+        var pages = p(page, numpages, 2);
+
+        var page = parseInt(page) + 1;
+
+        $('.pro-pagination-style ul').empty();
+
+        $('.pro-pagination-style ul').append(`<li><a class="prev" href="javascript:void(0)"><i class="ion-ios-arrow-left"></i></a></li>`);
+
+        for(var i = 0; i < pages.length; i++)
+        {
+            var active = pages[i] == page ? `class="active"` : ``;
+
+            if(pages[i] == "...")
+            {
+                $('.pro-pagination-style ul').append(`<li>...</li>`);
+            }
+            else
+            {
+                $('.pro-pagination-style ul').append(`<li class="page-no" page="${pages[i] - 1}"><a href="javascript:void(0)" ${active}>${pages[i]}</a></li>`);
+            }
+        }
+
+        $('.pro-pagination-style ul').append(`<li><a class="next" href="javascript:void(0)"><i class="ion-ios-arrow-right"></i></a></li>`);
     }
 });

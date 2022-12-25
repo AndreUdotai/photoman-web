@@ -166,6 +166,6 @@
 
         <?php include 'includes/js.php'; ?>
 
-        <script src="assets/js/pages/explore.js"></script>
+        <script src="assets/js/pages/explore.js?v=1"></script>
     </body>
 </html>

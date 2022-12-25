@@ -5,7 +5,7 @@
 
         <?php include 'includes/head.php'; ?>
 
-        <title>Photoman - News</title>
+        <title>Photoman - Blog</title>
     </head>
 
     <body onload="displayUserProfile(); addToCart(); loadMyCart(); removeFromCart(); notifications();">
@@ -23,10 +23,10 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="breadcrumb-content">
-                                <h1 class="breadcrumb-hrading">News</h1>
+                                <h1 class="breadcrumb-hrading">Blog</h1>
                                 <ul class="breadcrumb-links">
                                     <li><a href="/">Home</a></li>
-                                    <li>News</li>
+                                    <li>Blog</li>
                                 </ul>
                             </div>
                         </div>
@@ -216,6 +216,6 @@
 
         <?php include 'includes/js.php'; ?>
 
-        <script src="assets/js/pages/news.js"></script>
+        <script src="assets/js/pages/news.js?v=1"></script>
     </body>
 </html>

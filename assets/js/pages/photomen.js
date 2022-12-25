@@ -37,7 +37,7 @@ $(function () {
 			let html = '';
 			let html1 = '';
 			const users = response.result.users;
-			const userCount = users.length;
+			const userCount = response.result.total_records;
 			let userCountNotification = userCount  == 1 ? `${userCount} record returned` : `${userCount} records returned`;
 
 			let userGrid = $('#shop-1 .row');
@@ -140,27 +140,31 @@ $(function () {
 			$('.pro-pagination-style ul').empty();
 
 			if(pagination)
-			{
-				$('.pro-pagination-style ul').append(`<li><a class="prev" href="javascript:void(0)"><i class="ion-ios-arrow-left"></i></a></li>`);
+            {
+                window.numpages = pagination.numPages;
 
-				for(var i = 1; i <= pagination.numPages; i++)
-				{
-					if(i == 1)
+                var pages = p(page, pagination.numPages, 2);
+
+                var page = parseInt(page) + 1;
+
+                $('.pro-pagination-style ul').append(`<li><a class="prev" href="javascript:void(0)"><i class="ion-ios-arrow-left"></i></a></li>`);
+
+                for(var i = 0; i < pages.length; i++)
+                {
+                    var active = pages[i] == page ? `class="active"` : ``;
+
+                    if(pages[i] == "...")
                     {
-                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${i - 1}"><a href="javascript:void(0)" class="active">`+i+`</a></li>`);    
-                    }
-                    else if(i == Math.ceil(pagination.numPages / 2) || i == pagination.numPages)
-                    {
-                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${i - 1}"><a href="javascript:void(0)">`+i+`</a></li>`);
+                        $('.pro-pagination-style ul').append(`<li>...</li>`);
                     }
                     else
                     {
-                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${i - 1}" style="display:none"><a href="javascript:void(0)">`+i+`</a></li>`);
+                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${pages[i] - 1}"><a href="javascript:void(0)" ${active}>${pages[i]}</a></li>`);
                     }
-				}
+                }
 
-				$('.pro-pagination-style ul').append(`<li><a class="next" href="javascript:void(0)"><i class="ion-ios-arrow-right"></i></a></li>`);
-			}
+                $('.pro-pagination-style ul').append(`<li><a class="next" href="javascript:void(0)"><i class="ion-ios-arrow-right"></i></a></li>`);
+            }
     	}
     	catch(e)
     	{
@@ -189,6 +193,7 @@ $(function () {
                 $('.pro-pagination-style ul').find("[page='"+next_page+"']").find('a').addClass('active');
                 
                 loadStaff(Limit, next_page);
+                pagenator(next_page);
             }
         });
 
@@ -209,6 +214,7 @@ $(function () {
                 $('.pro-pagination-style ul').find("[page='"+previous_page+"']").find('a').addClass('active');
                 
                 loadStaff(Limit, previous_page);
+                pagenator(previous_page);
             }
         });
 
@@ -221,6 +227,7 @@ $(function () {
             $('.pro-pagination-style ul').find("[page='"+page+"']").find('a').addClass('active');
             
             loadStaff(Limit, page);
+            pagenator(parseInt(page));
         });
 	}
 
@@ -234,4 +241,33 @@ $(function () {
 			listPages(Limit, 0);
 		})
 	}
+
+    function pagenator(page)
+    {
+        var numpages = window.numpages;
+                
+        var pages = p(page, numpages, 2);
+
+        var page = parseInt(page) + 1;
+
+        $('.pro-pagination-style ul').empty();
+
+        $('.pro-pagination-style ul').append(`<li><a class="prev" href="javascript:void(0)"><i class="ion-ios-arrow-left"></i></a></li>`);
+
+        for(var i = 0; i < pages.length; i++)
+        {
+            var active = pages[i] == page ? `class="active"` : ``;
+
+            if(pages[i] == "...")
+            {
+                $('.pro-pagination-style ul').append(`<li>...</li>`);
+            }
+            else
+            {
+                $('.pro-pagination-style ul').append(`<li class="page-no" page="${pages[i] - 1}"><a href="javascript:void(0)" ${active}>${pages[i]}</a></li>`);
+            }
+        }
+
+        $('.pro-pagination-style ul').append(`<li><a class="next" href="javascript:void(0)"><i class="ion-ios-arrow-right"></i></a></li>`);
+    }
 });

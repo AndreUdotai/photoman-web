@@ -18,6 +18,9 @@
 								<span>
 									+234 (0) 816 005 1310
 								</span>
+								<span style="text-transform: lowercase !important;">
+									info@photoman.ng
+								</span>
 							</p>
 						</div>
 						<div class="social-info">
