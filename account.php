@@ -51,7 +51,7 @@
                                                     <div class="myaccount-info-wrapper">
                                                         <div class="account-info-wrapper">
                                                             <h4>Image Upload</h4>
-                                                            <h5>Upload Your Images For The Photoman Competition Here</h5>
+                                                            <h5>Upload Your Images For The Photoman Competition Here in the following order: Portraiture, Street Photography, Natural World and Landscape, Creative Photography, Night Photography, and Events.</h5>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-12">

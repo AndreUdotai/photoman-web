@@ -72,7 +72,7 @@
 									Watch Out For Our Upcoming<br> Photoman Competition 
 								</h1>
 								<p class="animated">Do not only dream, become. </p>
-								<a href="compettion" class="shop-btn animated">Apply</a>
+								<a href="competition" class="shop-btn animated">Apply</a>
 							</div>
 						</div>
 					</div>
