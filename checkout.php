@@ -50,6 +50,14 @@
                                     </div>
                                 </div>
                                 <div class="additional-info-wrap">
+                                    <h4>Please Note</h4>
+                                    <div class="additional-info">
+                                        <p>
+                                            After successful payments, find your ordered high quality images under the <a href="account"><b><i>MY ORDERS</i></b></a> tab in your profile</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="additional-info-wrap" style="display: none">
                                     <h4>Additional information</h4>
                                     <div class="additional-info">
                                         <label>Order notes</label>

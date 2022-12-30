@@ -51,7 +51,7 @@
                                                     <div class="myaccount-info-wrapper">
                                                         <div class="account-info-wrapper">
                                                             <h4>Image Upload</h4>
-                                                            <h5>Upload Your Images For The Photoman Competition Here in the following order: Portraiture, Street Photography, Natural World and Landscape, Creative Photography, Night Photography, and Events.</h5>
+                                                            <h5>Upload Your Images For The Photoman Competition Here in the following order: Portraiture, Street Photography, Natural World and Landscape, Creative Photography, Night Photography, and Events.<br><b><i>Note that uploading in the stated order results in the reverse arrangement of your images as latest updated image(s) appear first</i></b></h5>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-12">
@@ -473,6 +473,8 @@
 
         <?php include 'includes/js.php'; ?>
 
+        <!-- Axios -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js" integrity="sha512-QTnb9BQkG4fBYIt9JGvYmxPpd6TBeKp6lsUrtiVQsrJ9sb33Bn9s0wMQO9qVBFbPX3xHRAsBHvXlcsrnJjExjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- page script -->
         <script src="assets/js/pages/account.js?v=2"></script>
     </body>

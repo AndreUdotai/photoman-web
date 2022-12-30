@@ -506,10 +506,32 @@ $(function () {
             $.ajax({
                 type:'GET',
                 url:`${API_URL_ROOT}/media/download/${mediaID}`,
-                headers:{ 'x-access-token':token}
-            });
+                dataType:'json',
+                headers:{ 'x-access-token':token},
+                success:function(response)
+                {
+                    if(response.error == false)
+                    {
+                        var media = response.media;
+                        var url = media.media_url;
+                        var signedURL = media.url;
 
-            unblockUI();
+                        download(url);
+
+                        unblockUI();
+                    }
+                    else
+                    {
+                        showSimpleMessage("Attention", response.message, "error");
+                        unblockUI();
+                    }
+                },
+                error:function(req, status, error)
+                {
+                    showSimpleMessage("Attention", "ERROR - "+req.status+" : "+req.statusText, "error");
+                    unblockUI();
+                }
+            });
         })
     }
 
@@ -520,12 +542,39 @@ $(function () {
 
             var orderID = $(this).attr('data-id');
 
-            //blockUI();
+            blockUI();
 
             $.ajax({
                 type:'GET',
                 url:`${API_URL_ROOT}/orders/download/${orderID}`,
-            })
+                dataType:'json',
+                headers:{ 'x-access-token':token},
+                success:function(response)
+                {
+                    if(response.error == false)
+                    {
+                        var items = response.items;
+                        var urls = items.urls;
+
+                        for(var i = 0; i < urls.length; i++)
+                        {
+                            download(urls[i]);
+                        }
+                        
+                        unblockUI();
+                    }
+                    else
+                    {
+                        showSimpleMessage("Attention", response.message, "error");
+                        unblockUI();
+                    }
+                },
+                error:function(req, status, error)
+                {
+                    showSimpleMessage("Attention", "ERROR - "+req.status+" : "+req.statusText, "error");
+                    unblockUI();
+                }
+            });
         })
     }
 
@@ -958,5 +1007,34 @@ $(function () {
                 }
             });
         });
+    }
+
+    function download(url)
+    {
+        axios({
+            url,
+            method:'GET',
+            responseType:'blob'
+        })
+        .then((response) => {
+            const extensionPosition = url.lastIndexOf('.');
+            const extension = url.substr(extensionPosition).toLowerCase();
+            const URL = window.URL.createObjectURL(new Blob([response.data]))
+
+            const link = document.createElement('a');
+            
+            link.href = URL;
+
+            link.setAttribute('download', `image${extension}`);
+
+            document.body.appendChild(link);
+
+            link.click();
+        })
+    }
+
+    function download1(url)
+    {
+        $('<iframe>', { id:'idown', src:url }).hide().appendTo('body').click();
     }
 }); 
