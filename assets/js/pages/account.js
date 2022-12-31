@@ -458,7 +458,7 @@ $(function () {
                         for(var i = 0; i < items.length; i++)
                         {
                             itemsHTML += `
-                                <tr data-id="${items[i].media_id}" style="cursor:pointer" title="Click to download">
+                                <tr data-id="${items[i].media_id}" style="cursor:pointer" title="Click to download" class="btn-download">
                                     <td>${i + 1}</td>
                                     <td><img src="${items[i].media_thumbnail_url}" width="90" height="90" alt="${items[i].media_uuid}"/></td>
                                     <td>${items[i].media_event}</td>
@@ -496,10 +496,10 @@ $(function () {
 
     function downloadItem()
     {
-        $('#my_order_items').on('click', '.btn-download, tr', function(e){
+        $('#my_order_items').on('click', 'tr', function(e){
             e.preventDefault();
 
-            var mediaID = $(this).get(0).nodeName == "A" ? $(this).parents('tr').attr('data-id') : $(this).attr('data-id');
+            var mediaID = $(this).attr('data-id');
 
             blockUI();
 
@@ -514,9 +514,10 @@ $(function () {
                     {
                         var media = response.media;
                         var url = media.media_url;
+                        var filename = media.filename;
                         var signedURL = media.url;
 
-                        download(url);
+                        download(url, filename);
 
                         unblockUI();
                     }
@@ -555,10 +556,11 @@ $(function () {
                     {
                         var items = response.items;
                         var urls = items.urls;
+                        var keys = items.keys;
 
                         for(var i = 0; i < urls.length; i++)
                         {
-                            download(urls[i]);
+                            download(urls[i], keys[i]);
                         }
                         
                         unblockUI();
@@ -697,7 +699,7 @@ $(function () {
                         notifications();
 
                         $('#messageModal').find('.modal-title').text(msg.memo_subject)
-                        $('#messageModal').find('.message-body').html(msg.memo)
+       $('#messageModal').find('.message-body').html(msg.memo)
                     }
                     else
                     {
@@ -1009,7 +1011,7 @@ $(function () {
         });
     }
 
-    function download(url)
+    function download(url, filename)
     {
         axios({
             url,
@@ -1017,24 +1019,18 @@ $(function () {
             responseType:'blob'
         })
         .then((response) => {
-            const extensionPosition = url.lastIndexOf('.');
-            const extension = url.substr(extensionPosition).toLowerCase();
+
             const URL = window.URL.createObjectURL(new Blob([response.data]))
 
             const link = document.createElement('a');
             
             link.href = URL;
 
-            link.setAttribute('download', `image${extension}`);
+            link.setAttribute('download', `${filename}`);
 
             document.body.appendChild(link);
 
             link.click();
         })
-    }
-
-    function download1(url)
-    {
-        $('<iframe>', { id:'idown', src:url }).hide().appendTo('body').click();
     }
 }); 
