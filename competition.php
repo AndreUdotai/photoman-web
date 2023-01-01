@@ -141,6 +141,12 @@
                                                         </select>
                                                     </div>
 
+                                                    <label for="user_next_of_kin">Next Of Kin <span class="red-asteriks">*</span></label>
+                                                    <input type="text" class="required" id="user_next_of_kin" name="user_next_of_kin" placeholder="Next Of Kin" />
+
+                                                    <label for="user_next_of_kin_phone">Next Of Kin Phone Number <span class="red-asteriks">*</span></label>
+                                                    <input type="text" class="required" id="user_next_of_kin_phone" name="user_next_of_kin_phone" placeholder="Next Of Kin Phone Number" />
+
                                                     <label for="password">Password <span class="red-asteriks">*</span></label>
                                                     <div class="pw-field" style="position: relative;">
                                                         <input type="password" class="required" id="user_password" name="password" placeholder="Password" autocomplete="current-password" />
