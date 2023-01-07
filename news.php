@@ -216,6 +216,6 @@
 
         <?php include 'includes/js.php'; ?>
 
-        <script src="assets/js/pages/news.js?v=1"></script>
+        <script src="assets/js/pages/news.js?v=2"></script>
     </body>
 </html>

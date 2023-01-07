@@ -255,6 +255,6 @@
 
         <?php include 'includes/js.php'; ?>
 
-        <script src="assets/js/pages/media.js"></script>
+        <script src="assets/js/pages/media.js?v=1"></script>
     </body>
 </html>

@@ -11,10 +11,6 @@ $(function () {
 
         const eventID = getUrlParameter('eventid');
 
-		/*$('body').on('contextmenu', function(e){
-			e.preventDefault();
-		})*/
-
 		await loadEvent(eventID);
 
         await loadReviews(eventID, Limit, 0);
@@ -259,27 +255,31 @@ $(function () {
 			$('.pro-pagination-style ul').empty();
 
 			if(pagination)
-			{
-				$('.pro-pagination-style ul').append(`<li><a class="prev" href="javascript:void(0)"><i class="ion-ios-arrow-left"></i></a></li>`);
+            {
+                window.numpages = pagination.numPages;
 
-				for(var i = 1; i <= pagination.numPages; i++)
-				{
-					if(i == 1)
+                var page = parseInt(page) + 1;
+
+                var pages = p(page, pagination.numPages, 2);
+
+                $('.pro-pagination-style ul').append(`<li><a class="prev" href="javascript:void(0)"><i class="ion-ios-arrow-left"></i></a></li>`);
+
+                for(var i = 0; i < pages.length; i++)
+                {
+                    var active = pages[i] == page ? `class="active"` : ``;
+
+                    if(pages[i] == "...")
                     {
-                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${i - 1}"><a href="javascript:void(0)" class="active">`+i+`</a></li>`);    
-                    }
-                    else if(i == Math.ceil(pagination.numPages / 2) || i == pagination.numPages)
-                    {
-                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${i - 1}"><a href="javascript:void(0)">`+i+`</a></li>`);
+                        $('.pro-pagination-style ul').append(`<li>...</li>`);
                     }
                     else
                     {
-                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${i - 1}" style="display:none"><a href="javascript:void(0)">`+i+`</a></li>`);
+                        $('.pro-pagination-style ul').append(`<li class="page-no" page="${pages[i] - 1}"><a href="javascript:void(0)" ${active}>${pages[i]}</a></li>`);
                     }
-				}
+                }
 
-				$('.pro-pagination-style ul').append(`<li><a class="next" href="javascript:void(0)"><i class="ion-ios-arrow-right"></i></a></li>`);
-			}
+                $('.pro-pagination-style ul').append(`<li><a class="next" href="javascript:void(0)"><i class="ion-ios-arrow-right"></i></a></li>`);
+            }
     	}
     	catch(e)
     	{
@@ -306,6 +306,7 @@ $(function () {
                 $('.pro-pagination-style ul').find("[page='"+next_page+"']").find('a').addClass('active');
                 
                 loadReviews(eventID, Limit, next_page);
+                pagenator(next_page);
             }
         });
 
@@ -326,6 +327,7 @@ $(function () {
                 $('.pro-pagination-style ul').find("[page='"+previous_page+"']").find('a').addClass('active');
                 
                 loadReviews(eventID, Limit, previous_page);
+                pagenator(previous_page);
             }
         });
 
@@ -338,6 +340,7 @@ $(function () {
             $('.pro-pagination-style ul').find("[page='"+page+"']").find('a').addClass('active');
             
             loadReviews(eventID, Limit, page);
+            pagenator(parseInt(page));
         });
 	}
 
@@ -543,7 +546,7 @@ $(function () {
                                                 <h4>${reviews[i].rater}</h4>
                                             </div>
                                             <div class="rating-product">${returnRating(reviews[i].rating)}</div>
-                                        </div>
+                                        </div>&nbsp;&nbsp;&nbsp;
                                         <div class="review-left">
                                             <a href="javascript:void()">${moment.unix(reviews[i].rating_created_at).format('MMMM Do YYYY, h:mm:ss a')}</a>
                                         </div>
@@ -589,5 +592,34 @@ $(function () {
         {
             $('.wa-share').attr('href', 'https://web.whatsapp.com/send?text=https://photoman.ng/event?eventid=' + eventID);
         }
+    }
+
+    function pagenator(page)
+    {
+        var numpages = window.numpages;
+
+        var page = parseInt(page) + 1;
+                
+        var pages = p(page, numpages, 2);
+
+        $('.pro-pagination-style ul').empty();
+
+        $('.pro-pagination-style ul').append(`<li><a class="prev" href="javascript:void(0)"><i class="ion-ios-arrow-left"></i></a></li>`);
+
+        for(var i = 0; i < pages.length; i++)
+        {
+            var active = pages[i] == page ? `class="active"` : ``;
+
+            if(pages[i] == "...")
+            {
+                $('.pro-pagination-style ul').append(`<li>...</li>`);
+            }
+            else
+            {
+                $('.pro-pagination-style ul').append(`<li class="page-no" page="${pages[i] - 1}"><a href="javascript:void(0)" ${active}>${pages[i]}</a></li>`);
+            }
+        }
+
+        $('.pro-pagination-style ul').append(`<li><a class="next" href="javascript:void(0)"><i class="ion-ios-arrow-right"></i></a></li>`);
     }
 });

@@ -191,9 +191,9 @@ $(function () {
 			{
 				window.numpages = pagination.numPages;
 
-                var pages = p(page, pagination.numPages, 2);
+				var page = parseInt(page) + 1;
 
-                var page = parseInt(page) + 1;
+                var pages = p(page, pagination.numPages, 2);
 
 				$('.pro-pagination-style ul').append(`<li><a class="prev" href="javascript:void(0)"><i class="ion-ios-arrow-left"></i></a></li>`);
 
@@ -586,10 +586,10 @@ $(function () {
 	function pagenator(page)
     {
         var numpages = window.numpages;
-                
-        var pages = p(page, numpages, 2);
 
         var page = parseInt(page) + 1;
+                
+        var pages = p(page, numpages, 2);
 
         $('.pro-pagination-style ul').empty();
 
