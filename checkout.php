@@ -45,7 +45,7 @@
                                     <div class="col-lg-12">
                                         <div class="billing-info mb-20px">
                                             <label for="billing_email_address">Email Address <span class="red-asteriks">*</span></label>
-                                            <input type="email" class="required" id="billing_email_address" name="billing_email_address" />
+                                            <input type="email" class="required" id="billing_email_address" name="billing_email_address" readonly="" />
                                         </div>
                                     </div>
                                 </div>
