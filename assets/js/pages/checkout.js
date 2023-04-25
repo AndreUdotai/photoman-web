@@ -121,7 +121,7 @@ $(function () {
         })
     }
 
-    function verifyPayment(invoiceToken, reference)
+    /*function verifyPayment(invoiceToken, reference)
     {
         blockUI();
 
@@ -139,6 +139,9 @@ $(function () {
                     unblockUI();
                     showSimpleMessage("Success", response.message, "success");
 
+                    //download items
+                    downloadItems(response.order_id);
+
                     setTimeout(function(){
                         window.location.reload();
                     }, 3000)
@@ -155,6 +158,39 @@ $(function () {
                 showSimpleMessage("Attention", "ERROR - "+req.status+" : "+req.statusText, "error");
             }
         })
+    }*/
+
+    async function verifyPayment(invoiceToken, reference)
+    {
+        blockUI();
+
+        try
+        {
+            const response = await $.ajax({
+                type:'GET',
+                url:`${API_URL_ROOT}/verify-payment?invoiceToken=${invoiceToken}&reference=${reference}`,
+                dataType:'json',
+                headers:{ 'x-access-token':token }
+            });
+
+            //download items
+            await downloadItems(response.order_id);
+
+            localStorage.removeItem('cart');
+
+            unblockUI();
+
+            showSimpleMessage("Success", response.message, "success");
+
+            setTimeout(function(){
+                window.location.reload();
+            }, 3000)
+        }
+        catch(e)
+        {
+            unblockUI();
+            showSimpleMessage("Attention", e.message, "error");
+        }
     }
 
     function payWithPayStack(invoiceToken)
@@ -179,5 +215,97 @@ $(function () {
         });
         
         handler.openIframe();
+    }
+
+    /*function downloadItems(orderID)
+    {
+        blockUI();
+
+        $.ajax({
+            type:'GET',
+            url:`${API_URL_ROOT}/orders/download/${orderID}`,
+            dataType:'json',
+            headers:{ 'x-access-token':token},
+            success:function(response)
+            {
+                if(response.error == false)
+                {
+                    var items = response.items;
+                    var urls = items.urls;
+                    var keys = items.keys;
+
+                    for(var i = 0; i < urls.length; i++)
+                    {
+                        download(urls[i], keys[i]);
+                    }
+                    
+                    unblockUI();
+                }
+                else
+                {
+                    showSimpleMessage("Attention", response.message, "error");
+                    unblockUI();
+                }
+            },
+            error:function(req, status, error)
+            {
+                showSimpleMessage("Attention", "ERROR - "+req.status+" : "+req.statusText, "error");
+                unblockUI();
+            }
+        });
+    }*/
+
+    async function downloadItems(orderID)
+    {
+        blockUI();
+
+        try
+        {
+            const response = await $.ajax({
+                type:'GET',
+                url:`${API_URL_ROOT}/orders/download/${orderID}`,
+                dataType:'json',
+                headers:{ 'x-access-token':token}    
+            });
+
+            var items = response.items;
+            var urls = items.urls;
+            var keys = items.keys;
+
+            for(var i = 0; i < urls.length; i++)
+            {
+                download(urls[i], keys[i]);
+            }
+            
+            unblockUI();
+        }
+        catch(e)
+        {
+            unblockUI();
+            showSimpleMessage("Attention", e.message, "error");   
+        }
+    }
+
+    function download(url, filename)
+    {
+        axios({
+            url,
+            method:'GET',
+            responseType:'blob'
+        })
+        .then((response) => {
+
+            const URL = window.URL.createObjectURL(new Blob([response.data]))
+
+            const link = document.createElement('a');
+            
+            link.href = URL;
+
+            link.setAttribute('download', `${filename}`);
+
+            document.body.appendChild(link);
+
+            link.click();
+        })
     }
 }); 
