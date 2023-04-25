@@ -964,7 +964,7 @@
        Blog Gallery Slider Active
     ------------------------------ */
 
-      $('.blog-gallery').slick({
+    $('.blog-gallery').slick({
         dots: false,
         infinite: true,
         arrows: true,
