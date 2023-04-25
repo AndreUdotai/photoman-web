@@ -74,12 +74,13 @@
             </section>
 
             <!-- Breadcrumb Area start -->
-            <section class="breadcrumb-area">
+            <section class="breadcrumb-area" style="padding-bottom: 0">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="breadcrumb-content">
                                 <h1 class="breadcrumb-hrading">The Team</h1>
+                                <p>Meet the innovative minds driving Photoman</p>
                             </div>
                         </div>
                     </div>
