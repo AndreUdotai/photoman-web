@@ -174,6 +174,10 @@
         <!-- JS============================================ -->
 
         <?php include 'includes/js.php'; ?>
-        <script src="assets/js/pages/checkout.js"></script>
+
+        <!-- Axios -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js" integrity="sha512-QTnb9BQkG4fBYIt9JGvYmxPpd6TBeKp6lsUrtiVQsrJ9sb33Bn9s0wMQO9qVBFbPX3xHRAsBHvXlcsrnJjExjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <script src="assets/js/pages/checkout.js?v=1"></script>
     </body>
 </html>
