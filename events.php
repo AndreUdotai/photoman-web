@@ -91,7 +91,7 @@
                                     </div>
                                     <div class="shop-select">
                                         <select id="sortBy">
-                                            <option value="id_desc">Sort by newness</option>
+                                            <option value="id_desc">Sort by newest</option>
                                             <option value="name_asc">A to Z</option>
                                             <option value="name_desc"> Z to A</option>
                                         </select>
