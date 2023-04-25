@@ -699,7 +699,7 @@ $(function () {
                         notifications();
 
                         $('#messageModal').find('.modal-title').text(msg.memo_subject)
-       $('#messageModal').find('.message-body').html(msg.memo)
+                        $('#messageModal').find('.message-body').html(msg.memo)
                     }
                     else
                     {
