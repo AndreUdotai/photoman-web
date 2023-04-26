@@ -12,6 +12,12 @@ $(function () {
         register();
         //toggle passwords
         togglePasswords();
+
+        $('#apply-btn').on('click', function(e){
+            e.preventDefault();
+            const applyDiv = document.getElementById("apply-now");
+            applyDiv.scrollIntoView();
+        })
     });
 
     function register()
