@@ -461,6 +461,6 @@
         <!-- JS ============================================ -->
 
         <?php include 'includes/js.php'; ?>
-        <script src="assets/js/pages/competition.js?v=2"></script>
+        <script src="assets/js/pages/competition.js?v=3"></script>
     </body>
 </html>
