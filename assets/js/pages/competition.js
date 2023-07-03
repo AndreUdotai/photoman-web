@@ -12,6 +12,10 @@ $(function () {
         register();
         //toggle passwords
         togglePasswords();
+        //preppend phone code
+        preppendCountryCode();
+        //general info accordion
+        accordion();
 
         $('#apply-btn').on('click', function(e){
             e.preventDefault();
@@ -169,5 +173,58 @@ $(function () {
                 parentForm.find('.lg').niceSelect('update');
             }
         });
+    }
+
+    function preppendCountryCode() 
+    {
+        var countryCode = '+234'; // Replace with your desired country code
+        var phoneInput = document.getElementById('user_phone');   
+
+        phoneInput.addEventListener('focus', function() {
+            if (!phoneInput.value.startsWith(countryCode)) {
+                phoneInput.value = countryCode + '' + phoneInput.value;
+            }
+
+            if(phoneInput.value[0] === "0")
+            {
+                phoneInput.value = countryCode + '' + phoneInput.value.slice(1);
+            }
+        });
+
+        phoneInput.addEventListener('blur', function() {
+            if (!phoneInput.value.startsWith(countryCode)) {
+
+                if(phoneInput.value[0] === "0")
+                {
+                    phoneInput.value = countryCode + '' + phoneInput.value.slice(1);
+                }
+                else
+                {
+                    phoneInput.value = countryCode + '' + phoneInput.value;
+                }
+            }
+        });
+    }
+
+    function accordion()
+    {
+        // JavaScript code goes here
+        var accordionHeaders = document.getElementsByClassName('accordion-header');
+
+        for (var i = 0; i < accordionHeaders.length; i++) {
+            accordionHeaders[i].addEventListener('click', function() {
+                var accordionItem = this.parentElement;
+                
+                accordionItem.classList.toggle('active');
+            
+                var accordionContent = accordionItem.querySelector('.accordion-content');
+            
+                if (accordionContent.style.display === 'block') {
+                    accordionContent.style.display = 'none';
+                } else {
+                    accordionContent.style.display = 'block';
+                }
+            });
+        }
     }
 }); 
