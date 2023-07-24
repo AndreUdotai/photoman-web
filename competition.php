@@ -166,7 +166,8 @@
                                 <div class="single-blog-post blog-grid-post full-width">
                                     <div class="blog-post-media full-width">
                                         <div class="blog-post-video video-container full-width">
-                                            <iframe src="https://youtu.be/ACQdq4NHZMg" allow="autoplay; encrypted-media" allowfullscreen="" class="full-width"></iframe>
+                                            <!-- <iframe src="https://youtu.be/ACQdq4NHZMg" allow="autoplay; encrypted-media" allowfullscreen="" class="full-width"></iframe> -->
+                                            <iframe src="https://www.youtube.com/embed/ACQdq4NHZMg" title="Photoman Competition Reel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="full-width"></iframe>
                                         </div>
                                     </div>
                                 </div>
