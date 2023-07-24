@@ -166,7 +166,7 @@
                                 <div class="single-blog-post blog-grid-post full-width">
                                     <div class="blog-post-media full-width">
                                         <div class="blog-post-video video-container full-width">
-                                            <iframe src="https://www.youtube.com/embed/-4swGz905uk" allow="autoplay; encrypted-media" allowfullscreen="" class="full-width"></iframe>
+                                            <iframe src="https://youtu.be/ACQdq4NHZMg" allow="autoplay; encrypted-media" allowfullscreen="" class="full-width"></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -256,7 +256,7 @@
                                         <div class="accordion-header font-bold">General Rules</div>
                                         <div class="accordion-content">
                                             <p>
-                                                <ol type="i">
+                                                <ol type="1">
                                                     <li>By entering the competition, you hereby accept to abide by the policy and rules of the Photoman Ccompetition 2023(“the Competition”) and submit to the terms and conditions adopted thereof;</li>
                                                     <li>Entry is free of chargefrom the Photoman platformand the competition is open to all photographers in Nigeria;</li>
                                                     <li>Entries must be submitted between (…);</li>
@@ -272,7 +272,7 @@
                                         <div class="accordion-header font-bold">Image Specification</div>
                                         <div class="accordion-content">
                                             <p style="text-align: justify;">
-                                                <ol type="i">
+                                                <ol type="1">
                                                     <li>Images submitted must be taken specifically for the Competition or adopted for it. Only photographs taken in 2023 will be accepted in the Competition. Each entries should reflect the category against which the photograph is submitted, and must be based on the six (6) categories outlined. Additional information can be found on the Website;</li>
                                                     <li>Images should be no smaller than 1MB and no larger than 3MB. Images should be JPEG files. All images must be saved in the sRGB colour model,</li>
                                                     <li>Images must be of high-resolution and suitable for printing in media and capable of being printed for exhibition, if needed. </li>
@@ -285,7 +285,7 @@
                                         <div class="accordion-header font-bold">Procedure</div>
                                         <div class="accordion-content">
                                             <p style="text-align: justify;">
-                                                <ol type="i">
+                                                <ol type="1">
                                                     <li>Entries will be accessed by the judges between ()</li>
                                                     <li>The photographs will be voted for by the Judges and notified by email. [ ]</li>
                                                     <li>The decision of the Judges shall be final and no negotiation will be entered into with respect to any such decision;</li>
@@ -309,7 +309,7 @@
                                         <div class="accordion-header font-bold">Privacy Policy</div>
                                         <div class="accordion-content">
                                             <p style="text-align: justify">
-                                                <ol type="i">
+                                                <ol type="1">
                                                     <li>
                                                         Photoman reserves the right and sole discretion, to qualify or disqualify and remove any entry that does not comply with the Photoman Privacy Policy and Rules stipulated for this competition, even after the entry has been successfully is submitted on the Website. By submitting your entry for this competition, you hereby You certify and warrant, in respect of each entry you have submitted, that:
                                                         <ul>
@@ -342,7 +342,7 @@
                                         <div class="accordion-content">
                                             <p style="text-align: justify;">
                                                 All entrants understand that any image submitted to the competition may be used by the Photoman, and its event partners, for marketing and promotional purposes in relation to the competition or any other event or program of Photoman. You hereby grant Photoman a non-exclusive, irrevocable license in each submitted photoghraph throughout the world in all media for any use connected to the promotion of you the author and the Photoman competition, including, but not limited to:
-                                                <ol type="i">
+                                                <ol type="1">
                                                     <li>judging the competition;</li>
                                                     <li>displaying the winning entries and runners up on the website;</li>
                                                     <li>inclusion within the website, or any publication,</li>
@@ -356,7 +356,7 @@
                                         <div class="accordion-header font-bold">Liability</div>
                                         <div class="accordion-content">
                                             <p style="text-align: justify;">
-                                                <ol type="i">
+                                                <ol type="1">
                                                     <li>
                                                         Photoman assumes no responsibility for any incorrect, inaccurate or incomplete information, whether caused by website users or by any of the equipment or programming associated with or utilized in the competition;
                                                     </li>
@@ -387,7 +387,7 @@
                                                 </div>
                                                 <div class="tab-content">
                                                     <div id="lg1" class="tab-pane active">
-                                                        <div class="login-form-container">
+                                                        <div class="login-form-container" style="padding: 40px 20px">
                                                             <div class="login-register-form">
                                                                 <form id="register-form">
                                                                     <label for="user_firstname">First name <span class="red-asteriks">*</span></label>
