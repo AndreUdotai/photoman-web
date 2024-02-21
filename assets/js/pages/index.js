@@ -7,10 +7,6 @@ $(function () {
 
 	$(document).ready(async function(){
 
-		/*$('body').on('contextmenu', function(e){
-			e.preventDefault();
-		})*/
-
 		await loadRecentCategories();
 
 		await loadRecentEvents();
@@ -105,7 +101,8 @@ $(function () {
 		}
 		catch(e)
 		{
-			showSimpleMessage("Attention", e.message, "error");
+			//showSimpleMessage("Attention", e.message, "error");
+			console.log(e.message)
 		}
 	}
 
@@ -210,7 +207,8 @@ $(function () {
 		}
 		catch(e)
 		{
-			showSimpleMessage("Attention", e.message, "error");
+			//showSimpleMessage("Attention", e.message, "error");
+			console.log(e.message)
 		}
 	}
 
@@ -293,7 +291,8 @@ $(function () {
 		}
 		catch(e)
 		{
-			showSimpleMessage("Attention", e.message, "error");
+			//showSimpleMessage("Attention", e.message, "error");
+			console.log(e.message);
 		}
 	}
 
@@ -404,9 +403,9 @@ $(function () {
 			}
 			catch(e)
 			{
-				showSimpleMessage("Attention", e.message, "error");	
+				//showSimpleMessage("Attention", e.message, "error");	
+				console.log(e.message)
 			}
-
 		})
 	}
 
