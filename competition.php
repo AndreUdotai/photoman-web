@@ -397,6 +397,15 @@
                                                                     <label for="user_lastname">Last name <span class="red-asteriks">*</span></label>
                                                                     <input type="text" class="required" id="user_lastname" name="user_lastname" placeholder="Last name" />
 
+                                                                    <label for="state">Gender <span class="red-asteriks">*</span></label>
+                                                                    <div class="rating-form-style mb-10">
+                                                                        <select class="required gender" id="gender" name="user_gender">
+                                                                            <option value="">Please Select</option>
+                                                                            <option value="Male">Male</option>
+                                                                            <option value="Female">Female</option>
+                                                                        </select>
+                                                                    </div>
+
                                                                     <label for="user_email">Valid email address <span class="red-asteriks">*</span></label>
                                                                     <input type="email" class="required" id="user_email" name="user_email" placeholder="Email" />
 
@@ -416,6 +425,10 @@
                                                                             <option value="">Please select</option>
                                                                         </select>
                                                                     </div>
+
+                                                                    <label for="user_email">Contact address <span class="red-asteriks">*</span></label>
+                                                                    <input type="text" class="required" id="user_contact_address" name="user_contact_address" placeholder="Contact Address" />
+
 
                                                                     <label for="user_next_of_kin">Next Of Kin <span class="red-asteriks">*</span></label>
                                                                     <input type="text" class="required" id="user_next_of_kin" name="user_next_of_kin" placeholder="Next Of Kin" />
@@ -462,6 +475,6 @@
         <!-- JS ============================================ -->
 
         <?php include 'includes/js.php'; ?>
-        <script src="assets/js/pages/competition.js?v=3"></script>
+        <script src="assets/js/pages/competition.js?v=4"></script>
     </body>
 </html>
