@@ -306,6 +306,6 @@
 		
 		<?php include 'includes/js.php'; ?>
 
-		<script src="assets/js/pages/index.js"></script>
+		<script src="assets/js/pages/index.js?v=1"></script>
 	</body>
 </html>
